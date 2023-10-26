@@ -1,6 +1,7 @@
 {
   "name": "client",
   "version": "0.1.0",
+  "homepage": "https://fortunato-pharmaceuticals.onrender.com",
   "proxy": "https://fortunato-api.onrender.com/api/",
   "private": true,
   "dependencies": {
