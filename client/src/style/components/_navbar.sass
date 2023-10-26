@@ -1,0 +1,123 @@
+.navbar-container-mobile
+    @include width-height(100%, 7rem)
+    @include set-position(fixed, 0,0)
+    box-shadow: 2px 10px 14px 2px rgba(0,0,0,0.22)
+    background-color: whiteSmoke
+    transition: all 0.3s linear
+    overflow-y: hidden
+    z-index: 10
+
+    &.expand
+        height: 30rem
+
+    // TOP CONTAINER (CONTAIN NAV ICON AND BURGER BTN)
+    .top-container
+        @include width-height(100%, 7rem)
+        @include flexbox(row, space-between, center)
+        padding: 0 1.5rem 0 1.5rem
+        background-color: whiteSmoke
+
+        .navbar-title-container
+            @include flexbox(row, flex-start,center,0.5rem)
+            // ICON
+            .navbar-icon
+                @include width-height(5rem,5rem)
+            // TITLE
+            .navbar-title
+                @include set-font(	$darkTextBlue, "Poppins", 1.6rem, 600, normal)
+            // SUBTITLE
+            .navbar-subtitle
+                @include set-font(	$textBlue, "Poppins", 1.4rem, 400, normal)
+        .navbar-btn
+            @include width-height(4rem,4rem)
+    
+    // LINKS CONTAINER
+    .links-container-mobile
+        @include flexbox(column, flex-start,flex-start)
+        @include width-height(100%,auto)
+        background-color: whiteSmoke
+
+        // EACH LINK
+        .navbar-link
+            @include width-height(100%,100%)
+            @include set-font(	$darkTextBlue, "Poppins", 1.6rem, 400, normal)
+            padding: 1rem 2rem
+
+            // LOGIN BUTTON
+            &.login-btn, &.logout-btn
+                @include width-height(12rem, auto)
+                @include set-font(	$darkTextBlue, "Poppins", 1.4rem, 600, normal)
+
+                text-align: center
+                align-self: center
+                border: 0.1rem solid $darkTextBlue
+                border-radius: 0.4rem
+                padding: 0.5rem
+                margin-bottom: 1.2rem
+
+                cursor: pointer
+                transition: all 0.2s linear
+                &:hover
+                    background-color: $darkTextBlue
+                    color: white
+.navbar-bg
+    @include width-height(100%,100%)
+    @include set-position(absolute,0,0)
+    background-color: rgba(33,33,33,0.5)
+    transition: all 0.2s linear
+    opacity: 0
+    z-index: 2
+    &.expand
+        opacity: 1
+
+// DESKTOP DESIGN
+.navbar-container-desktop
+    @include width-height(100%, 9rem)
+    @include flexbox(row, space-between, center)
+    box-shadow: 2px 10px 14px 2px rgba(0,0,0,0.22)
+    background-color: whiteSmoke
+    padding: 0 2rem 0 2rem
+    z-index: 10
+
+    .left-container
+        @include flexbox(row, flex-start, center, 1rem)
+        // ICON
+        .navbar-icon
+            @include width-height(5.3rem,5.3rem)
+        // TITLE
+        .navbar-title
+            @include set-font(	$darkTextBlue, "Poppins",2.4rem, 600, normal)
+        // SUBTITLE
+        .navbar-subtitle
+            @include set-font(	$textBlue, "Poppins", 1.6rem, 400, normal)
+    
+    // LINKS CONTAINER
+    .links-container
+        @include flexbox(row, flex-end, center, 2.2rem)
+
+        .navbar-link
+            @include set-font(	$darkTextBlue, "Poppins", 1.8rem, 400, normal)
+            transition: all 0.1s linear
+            cursor: pointer
+
+            &:hover
+                font-weight: 600
+            // LOGIN BUTTON
+            &.login-btn, &.logout-btn
+                @include width-height(12rem, auto)
+                @include set-font(	$darkTextBlue, "Poppins", 1.4rem, 600, normal)
+
+                text-align: center
+                align-self: center
+                border: 0.1rem solid $darkTextBlue
+                border-radius: 0.4rem
+                padding: 0.5rem
+
+                cursor: pointer
+                transition: all 0.2s linear
+                &:hover
+                    background-color: $darkTextBlue
+                    color: white
+
+
+

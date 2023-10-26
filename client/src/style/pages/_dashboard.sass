@@ -1,0 +1,127 @@
+.dashboard-container
+    @include width-height(100%,100%)
+    @include flexbox(column, flex-start, flex-start,2rem)
+    background-color: rgb(240,240,240)
+    padding: 1rem 1rem 3rem 1rem
+    
+    // PAGE TITLE
+    .page-title
+        @include set-font($lightBlack, "Poppins", 1.8rem , 400, normal)
+        padding: 1rem 0 0 0
+
+    // PANELS MAIN CONTAINER 
+    .panels-container
+        @include flexbox(row, center, flex-start, 2rem)
+        @include width-height(100%,100%)
+
+        // USER PANEL
+        .user-panel
+            @include width-height(100%, 100%)
+            @include flexbox(column, flex-start, flex-start)
+            box-shadow: 2px 8px 14px 2px rgba(0,0,0,0.22)
+            background-color: white
+            width: 30%
+            border-radius: 0.4rem
+
+            h2
+                @include flexbox(row, flex-start, center)
+                @include set-font($white, "Poppins", 1.6rem, 400, normal)
+                @include width-height(100%, 3.6rem)
+                padding-left: 1rem
+                background-color: $darkTextBlue
+                border-radius: 0.4rem 0.4rem 0 0
+
+            .information-container
+                padding: 1rem
+                @include flexbox(column, flex-start, space-betwwen, 0.4rem)
+                @include width-height(100%, 100%)
+                p
+                    @include flexbox(row, space-between, center)
+                    @include width-height(100%, 100%)
+                    @include set-font($black, "Poppins", 1.6rem, 400, normal)
+                    span
+                        font-weight: 600
+
+
+        // SEARCH FORM CONTAINER
+        .search-container
+            @include width-height(100%, 100%)
+            @include flexbox(column, flex-start, flex-start)
+            box-shadow: 2px 8px 14px 2px rgba(0,0,0,0.22)
+            background-color: white
+            border-radius: 0.4rem
+
+
+            // HEAD TITLE
+            h2
+                @include flexbox(row, flex-start, center)
+                @include set-font($white, "Poppins", 1.6rem, 400, normal)
+                @include width-height(100%, 3.6rem)
+                padding-left: 1rem
+                background-color: $darkTextBlue
+                border-radius: 0.4rem 0.4rem 0 0
+
+            // INTRO GUIDE
+            p
+                @include set-font($black, "Poppins", 1.4rem, 400, normal)
+                padding: 2rem 1rem 2rem 1rem
+                max-width: 75rem
+
+            // THE SEARCH FORM
+            .search-form
+                @include flexbox(column, flex-start, flex-end, 2rem)
+                @include width-height(100%, 100%)
+                max-width: 40rem
+                border: 0.2rem solid rgba($darkTextBlue,0.8)
+                border-radius: 0.6rem
+                padding: 2rem
+                margin: 1rem 1rem 2rem 1rem
+
+                .input-container
+                    @include width-height(100%,100%)
+                    @include flexbox(row, space-between, center, 1rem)
+                    label
+                        @include set-font($black, "Poppins", 1.4rem, 400, normal)
+                        
+                    .input-field
+                        background-color: transparent
+                        outline: none
+                        border: 0.1rem solid rgba($black, 0.5)
+                        @include width-height(50%, 3.5rem)
+                        border-radius: 0.4rem
+                        caret-color: black
+                        padding: 0.5rem
+                        @include set-font($black, "Poppins", 1.4rem, 400, normal)
+                        cursor: text
+
+            // BUTTONS CONTAINER 
+            .buttons-container
+                padding-left: 0
+                padding-top: 2rem
+                @include flexbox(row, flex-start, center, 1.5rem)
+                button
+                    background-color: $darkTextBlue
+                    @include set-font(white, "Poppins", 1.4rem, 400, normal)
+                    border: none
+                    padding: 0.8rem 2rem
+                    border-radius: 0.6rem
+                .link
+                    @include set-font($darkTextBlue, "Poppins", 1.3rem, 400, normal)
+
+    .result-container
+        @include width-height(100%,100%)
+        h2
+            @include flexbox(row, flex-start, center)
+            @include set-font($white, "Poppins", 1.6rem, 400, normal)
+            @include width-height(100%, 3.6rem)
+            padding-left: 1rem
+            background-color: $darkTextBlue
+            border-radius: 0.4rem 0.4rem 0 0
+
+
+
+    
+
+
+
+    

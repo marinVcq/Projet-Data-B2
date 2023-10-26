@@ -1,0 +1,27 @@
+.about-container
+    @include width-height(100%,100%)
+    @include flexbox(column, flex-start, center, 3rem)
+    padding: 1rem 1rem 3rem 1rem
+    max-width: 110rem
+
+    .page-title
+        @include width-height(100%,auto)
+        @include set-font($black, "Poppins", 2.5rem, 600, normal)
+        padding: 1.5rem 1.5rem 1.5rem 1.5rem
+
+    .page-section
+        @include flexbox(row, space-between, flex-start)
+        .paragraphe-container
+            padding: 0 1.5rem 0 1.5rem
+            @include flexbox(column, flex-start, flex-start, 1.5rem)
+            @include width-height(50%, 100%)
+            h2
+                @include set-font($lightBlack, "Poppins", 2rem, 400, normal)
+            p
+                @include set-font($lightBlack, "Poppins",1.5rem, 400, normal)
+                span
+                    @include set-font($lightBlack, "Poppins",1.5rem, 600, normal)
+
+        .section-image
+            @include width-height(50%, 100%)
+

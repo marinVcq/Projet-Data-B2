@@ -1,0 +1,236 @@
+.page-container
+    @include width-height(100%,100%)
+    background-color: rgb(240,240,240)
+    padding: 9rem 1rem 3rem 1rem
+    max-height: 100vh
+
+    // PAGE TITLE
+    .page-title
+        @include width-height(100%,auto)
+        @include set-font($black, "Poppins", 2rem, 500, normal)
+        padding: 1.5rem 0 1.5rem 0
+
+    .login-section
+        @include width-height(100%,100%)
+        @include flexbox(column, flex-start, flex-start, 2rem)
+
+        .intro-container, .login-form-container
+            @include width-height(100%,100%)
+            border-radius: 0.4rem
+            @include flexbox(row,flex-start, center)
+            flex-wrap: wrap
+            background-color: $white
+            box-shadow: 2px 8px 14px 2px rgba(0,0,0,0.22)
+
+            h2
+                @include flexbox(row, flex-start, center)
+                @include set-font($white, "Poppins", 1.6rem, 400, normal)
+                @include width-height(100%, 3.6rem)
+                padding-left: 1rem
+                background-color: $textBlue
+                border-radius: 0.4rem 0.4rem 0 0
+
+            // INTRO IMAGE
+            .intro-image
+                @include width-height(20%, auto)
+                padding: 1%
+            
+            // INTRO CONTENT
+            .intro-container-content
+                @include width-height(80%, auto)
+                @include flexbox(column, flex-start, flex-start, 2rem)
+                padding: 1rem
+                p
+                    @include set-font($black, "Poppins", 1.2rem, 400, normal)
+
+            // LOGIN FORM
+            .login-form
+                @include flexbox(column, flex-start, flex-start, 1rem)
+                @include width-height(100%,100%)
+                padding: 1.5rem
+                
+
+                // INPUT FIELD
+                .input-container
+                    padding-left: 0
+                    @include flexbox(row, flex-end, center, 1rem)
+                    @include width-height(100%,100%)
+                    position: relative
+
+                    .input-label
+                        @include width-height(50%, 100%)
+                        @include flexbox(row, flex-end, center)
+                        @include set-font($black, "Poppins", 1.2rem, 400, normal)
+
+                    .input-field
+                        background-color: transparent
+                        outline: none
+                        border: 0.1rem solid rgba($black, 0.5)
+                        @include width-height(50%, 3.5rem)
+                        border-radius: 0.4rem
+                        caret-color: black
+                        padding: 0.5rem
+                        @include set-font($black, "Poppins", 1.4rem, 400, normal)
+                        cursor: text
+
+                // CHECKBOX 'REMEMBER ME'
+                .checkbox-container
+                    padding-left: 0
+                    padding-top: 2rem
+                    @include flexbox(row, flex-end, center, 1rem)
+                    input
+                        cursor: pointer
+                    p
+                        flex: 1
+                        @include set-font($black, "Poppins", 1.3rem, 400, normal)
+                
+                // REGISTER LINK
+                .register-link
+                    padding-left: 0
+                    padding-top: 2rem
+                    @include set-font($black, "Poppins", 1.3rem, 400, normal)
+                    .link
+                        @include set-font($darkTextBlue, "Poppins", 1.3rem, 400, normal)
+                
+                // BUTTONS CONTAINER 
+                .buttons-container
+                    padding-left: 0
+                    padding-top: 2rem
+                    @include flexbox(row, flex-start, center, 1.5rem)
+                    button
+                        background-color: $darkTextBlue
+                        @include set-font(white, "Poppins", 1.4rem, 400, normal)
+                        border: none
+                        padding: 0.8rem 2rem
+                        border-radius: 0.6rem
+                    .link
+                        @include set-font($darkTextBlue, "Poppins", 1.3rem, 400, normal)
+
+// DESKTOP DESIGN
+@include respond(desktop)
+    .page-container
+        @include width-height(100%,100%)
+        background-color: rgb(240,240,240)
+        padding: 2rem 3rem 15rem 3rem
+        max-height: 100vh
+
+        // PAGE TITLE
+        .page-title
+            @include width-height(100%,auto)
+            @include set-font($black, "Poppins", 2rem, 500, normal)
+            padding: 0 0 2rem 0
+
+        .login-section
+            @include width-height(100%,auto)
+            @include flexbox(row, space-between, flex-start)
+
+            .intro-container, .login-form-container
+                border-radius: 0.4rem
+                width: 48%
+                @include flexbox(row,flex-start, center)
+                flex-wrap: wrap
+                background-color: $white
+                // box-shadow: 0px 25px 38px -6px rgba(5,2,38,0.08)
+                box-shadow: 2px 8px 14px 2px rgba(0,0,0,0.22)
+
+                h2
+                    @include flexbox(row, flex-start, center)
+                    @include set-font($white, "Poppins", 1.6rem, 400, normal)
+                    @include width-height(100%, 3.6rem)
+                    padding-left: 1rem
+                    background-color: $darkTextBlue
+                    border-radius: 0.4rem 0.4rem 0 0
+
+                // INTRO IMAGE
+                .intro-image
+                    @include width-height(20%, auto)
+                    padding: 2rem
+                
+                // INTRO CONTENT
+                .intro-container-content
+                    @include width-height(80%, auto)
+                    @include flexbox(column, flex-start, flex-start, 2rem)
+                    padding: 1rem
+                    p
+                        @include set-font($black, "Poppins", 1.4rem, 400, normal)
+
+                // LOGIN FORM
+                .login-form
+                    @include flexbox(column, flex-start, flex-start, 1rem)
+                    @include width-height(100%,100%)
+                    padding: 1.5rem
+                    
+
+                    // INPUT FIELD
+                    .input-container
+                        @include width-height(auto,auto)
+                        padding-left: 16rem
+                        @include flexbox(row, flex-end, center, 1rem)
+                        position: relative
+
+                        .input-label
+                            @include width-height(15rem, 100%)
+                            @include flexbox(row, flex-end, center)
+                            @include set-font($black, "Poppins", 1.4rem, 400, normal)
+                            position: absolute
+                            top: 50%
+                            left: 0
+                            transform: translateY(-50%)
+
+                        .input-field
+                            background-color: transparent
+                            outline: none
+                            border: 0.1rem solid rgba($black, 0.5)
+                            @include width-height(19rem, 3.5rem)
+                            border-radius: 0.4rem
+                            caret-color: black
+                            padding: 0.5rem
+                            @include set-font($black, "Poppins", 1.4rem, 400, normal)
+                            cursor: text
+
+                    // CHECKBOX 'REMEMBER ME'
+                    .checkbox-container
+                        padding-left: 16rem
+                        padding-top: 0.8rem
+                        @include flexbox(row, flex-end, center, 1rem)
+                        input
+                            cursor: pointer
+                        p
+                            flex: 1
+                            @include set-font($black, "Poppins", 1.3rem, 400, normal)
+                    
+                    // REGISTER LINK
+                    .register-link
+                        padding-left: 16rem
+                        padding-top: 0.8rem
+                        @include set-font($black, "Poppins", 1.3rem, 400, normal)
+                        .link
+                            @include set-font($darkTextBlue, "Poppins", 1.3rem, 400, normal)
+                    // ERROR CONTAINER
+                    .login-error
+                        @include set-font(red, "Poppins", 1.2rem, 400, normal)
+                        padding-left: 16rem
+                    
+                    // BUTTONS CONTAINER 
+                    .buttons-container
+                        padding-left: 16rem
+                        padding-top: 0.8rem
+                        @include flexbox(row, flex-start, center, 1.5rem)
+                        button
+                            background-color: $darkTextBlue
+                            @include set-font(white, "Poppins", 1.4rem, 400, normal)
+                            border: none
+                            padding: 0.8rem 2rem
+                            border-radius: 0.6rem
+                        .link
+                            @include set-font($darkTextBlue, "Poppins", 1.3rem, 400, normal)
+
+
+
+
+
+
+
+
+
+                

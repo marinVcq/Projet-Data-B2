@@ -1,0 +1,227 @@
+.home-container
+    @include width-height(100%,100%)
+    @include flexbox(column, flex-start, center)
+
+    .header
+        @include width-height(100%, auto)
+        @include flexbox(column, flex-start, flex-start)
+        flex-direction: column-reverse
+
+        .hero-image
+            @include width-height(100%, 30rem)
+            object-fit: cover
+            object-position: center
+
+        // HEADER TEXT CONTAINER
+        .header-text-container
+            @include flexbox(column, flex-start, flex-start, 2rem)
+            z-index: 1
+            max-width: 75rem
+            padding: 2rem
+            .header-text-title
+                @include set-font( $darkTextBlue, "Poppins", 2rem , 600, normal)
+
+            .header-text-description
+                @include set-font($lightBlack, "Poppins", 1.5rem , 400, normal)
+                line-height: 2.6rem
+
+            .header-link
+                @include set-font( $darkTextBlue, "Poppins", 1.8rem , 600, normal)
+                // text-transform: uppercase 
+                border: 0.3rem solid $darkTextBlue
+                border-radius: 0.4rem
+                padding: 0.8rem
+                transition: all 0.1s linear
+                &:hover
+                    background-color: $darkTextBlue
+                    color: white
+                    border: 0.3rem solid $darkTextBlue
+
+        .header-overlay
+            @include set-position(absolute, 0, undefined, 0)
+            @include width-height(100%, 100%)
+            background: rgb(223,223,221)
+            background: linear-gradient(90deg, rgba(223,223,221,1) 10%, rgba(255,255,255,0) 100%)
+            z-index: 1
+            display: none
+    
+    // LIGODONE PRODUCT PREVIEW
+    .product-preview-container
+        @include width-height(100%, 100%)
+        @include flexbox(column, center, center,0rem)
+        padding: 2rem
+
+        .product-image
+            @include width-height(25rem, auto)
+
+        .product-detail-container
+            @include flexbox(column, center, center, 1rem)
+            max-width: 85rem
+
+        .product-title
+            @include set-font( $lightBlack, "Poppins", 3rem , 400, normal)
+            span
+                @include set-font( $lightBlack, "Poppins", 3rem , 600, normal)
+
+        .product-description
+            @include set-font( $lightBlack, "Poppins", 1.6rem , 400, normal)
+        .product-features
+            @include flexbox(column, flex-start, flex-start, 1.8rem)
+            padding: 2rem
+            .product-feature
+                @include set-font( $lightBlack, "Poppins", 1.4rem , 400, normal)
+                line-height: 2.5rem
+
+
+
+
+    // TESTIMONIAL SECTION
+    .testimonials-container
+        // background-color: rgb(230,230,230)
+        @include width-height(100%,100%)
+        max-width: 130rem
+        padding: 2rem
+        @include flexbox(column,flex-start,flex-start,0)
+        .testimonial-image
+            @include width-height(100%,auto)
+            object-fit: cover
+            object-position: center
+            border-radius: 0.4rem
+            margin-top: 2rem
+
+        div
+            @include flexbox(column, flex-start, flex-start, 1rem)
+            max-width: 75rem
+            .testimonial-title
+                @include set-font( $lightBlack, "Poppins", 1.8rem , 600, normal)
+
+            .testimonial-description
+                @include set-font( $lightBlack, "Poppins", 1.6rem , 400, normal)
+                line-height: 2.8rem
+            .signature
+                @include set-font( $lightBlack, "Poppins", 1.6rem , 600, normal)
+                span
+                    @include set-font( $lightBlack, "Poppins", 1.4rem , 400, italic)
+
+        &.coo
+            // background-color: white
+            margin-bottom: 5rem
+            @include flexbox(row, flex-end, center, 2%)
+
+.leitmotiv
+    @include set-font( $lightBlack, "Poppins", 1.8rem , 600, italic)
+
+// DESKTOP DESIGN
+@include respond(desktop)
+    .home-container
+        @include width-height(100%,100%)
+        @include flexbox(column, flex-start, center)
+
+        .header
+            @include width-height(100%, 100vh)
+            @include flexbox(row, flex-start, center)
+            position: relative
+            padding: 10%
+            .hero-image
+                position: absolute
+                top: 0
+                left: 0
+                @include width-height(100%, 100vh)
+                object-fit: cover
+                object-position: top
+                z-index: 0
+
+            // HEADER TEXT CONTAINER
+            .header-text-container
+                @include flexbox(column, flex-start, flex-start, 2rem)
+                z-index: 1
+                max-width: 75rem
+                .header-text-title
+                    @include set-font( $darkTextBlue, "Poppins", 5rem , 600, normal)
+                .header-text-description
+                    @include set-font($lightBlack, "Poppins", 2rem , 400, normal)
+                    line-height: 3.5rem
+
+                .header-link
+                    @include set-font( $darkTextBlue, "Poppins", 1.8rem , 600, normal)
+                    border: 0.3rem solid $darkTextBlue
+                    border-radius: 0.4rem
+                    padding: 0.8rem
+                    transition: all 0.1s linear
+                    &:hover
+                        background-color: $darkTextBlue
+                        color: white
+                        border: 0.3rem solid $darkTextBlue
+
+            .header-overlay
+                @include set-position(absolute, 0, undefined, 0)
+                @include width-height(80%, 100%)
+                background: rgb(223,223,221)
+                background: linear-gradient(90deg, rgba(223,223,221,1) 11%, rgba(255,255,255,0) 100%)
+                z-index: 1
+                display: block
+        
+        // LIGODONE PRODUCT PREVIEW
+        .product-preview-container
+            @include width-height(100%, 100%)
+            @include flexbox(row, center, center, 10rem)
+            padding: 5rem 2%
+
+            .product-image
+                @include width-height(30rem, auto)
+
+            .product-detail-container
+                @include flexbox(column, center, center, 3rem)
+                max-width: 85rem
+
+            .product-title
+                @include set-font( $lightBlack, "Poppins", 5rem , 400, normal)
+                span
+                    @include set-font( $lightBlack, "Poppins", 5rem , 600, normal)
+
+            .product-description
+                @include set-font( $lightBlack, "Poppins", 1.8rem , 400, normal)
+            .product-features
+                @include flexbox(column, flex-start, flex-start, 2rem)
+                .product-feature
+                    @include set-font( $lightBlack, "Poppins", 1.6rem , 400, normal)
+                    line-height: 2.5rem
+
+        // TESTIMONIAL SECTION
+        .testimonials-container
+            // background-color: rgb(230,230,230)
+            @include width-height(100%,100%)
+            max-width: 130rem
+            padding: 2%
+            @include flexbox(row, space-between, center, 2%)
+            margin-top: 5rem
+            .testimonial-image
+                @include width-height(auto,40rem)
+                border-radius: 0.6rem
+
+            div
+                @include flexbox(column, flex-start, flex-start,2rem)
+                max-width: 75rem
+                .testimonial-title
+                    @include set-font( $lightBlack, "Poppins", 3rem , 600, normal)
+
+                .testimonial-description
+                    @include set-font( $lightBlack, "Poppins", 1.8rem , 400, normal)
+                    line-height: 3rem
+                .signature
+                    @include set-font( $lightBlack, "Poppins", 1.8rem , 600, normal)
+                    span
+                        @include set-font( $lightBlack, "Poppins", 1.4rem , 400, italic)
+
+            &.coo
+                // background-color: white
+                margin-bottom: 5rem
+                @include flexbox(row, flex-end, center, 2%)
+
+
+    .leitmotiv
+        @include set-font( $lightBlack, "Poppins", 2rem , 600, italic)
+
+
+
+

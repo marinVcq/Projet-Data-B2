@@ -1,0 +1,76 @@
+.ressources-container
+    @include width-height(100%,100%)
+    @include flexbox(column, flex-start, center, 2rem)
+    background-color: rgb(240,240,240)
+    padding: 1rem 1rem 3rem 1rem
+    min-height: 100vh
+    .page-title
+        @include width-height(100%,auto)
+        @include set-font($black, "Poppins", 2rem, 500, normal)
+        padding: 1.5rem 0 1.5rem 0
+
+    .table-container
+        @include width-height(100%,100%)
+        background-color: white
+        border-radius: 0.4rem
+        .table-title
+            @include flexbox(row, flex-start, center)
+            @include set-font($white, "Poppins", 1.6rem, 400, normal)
+            @include width-height(100%, 3.6rem)
+            padding-left: 1rem
+            background-color: $darkTextBlue
+            border-radius: 0.4rem 0.4rem 0 0
+        .table
+            padding: 1rem
+            @include width-height(100%,100%)
+            @include flexbox(column, flex-start, flex-start)
+
+            .table-header
+                @include width-height(100%,100%)
+                @include flexbox(row, space-between, center)
+
+                p
+                    @include set-font($black, "Poppins", 1.6rem, 400, normal)
+
+            .table-content
+                @include width-height(100%,100%)
+
+                .table-row
+                    @include width-height(100%,100%)
+                    @include flexbox(row, flex-start, center)
+                    p
+                        @include set-font($black, "Poppins", 1.4rem, 400, normal)
+
+
+
+
+    // OLD TAB CONTAINER 
+    .tab-container
+        @include width-height(100%,100%)
+        background-color: white
+        box-shadow: 2px 8px 14px 2px rgba(0,0,0,0.22)
+
+
+        h2
+            @include flexbox(row, flex-start, center)
+            @include set-font($white, "Poppins", 1.6rem, 400, normal)
+            @include width-height(100%, 3.6rem)
+            padding-left: 1rem
+            background-color: $darkTextBlue
+            border-radius: 0.4rem 0.4rem 0 0
+
+        table
+            padding: 1rem
+            @include width-height(100%,100%)
+            border-collapse: separate
+            border-spacing: 1.5rem
+
+            thead
+                .column-header
+                    @include set-font($black, "Poppins", 1.6rem, 400, normal)
+                    text-align: start
+            tbody
+                .table-row
+                    @include set-font($black, "Poppins", 1.4rem, 400, normal)
+                    td
+

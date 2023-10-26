@@ -1,0 +1,1878 @@
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400&family=Noto+Sans:wght@300;400&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400&family=Source+Code+Pro:wght@300;400&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400&display=swap");
+@font-face {
+  font-family: "Akzidenz";
+  src: url("../assets/akzidenz.ttf") format("truetype");
+}
+* {
+  box-sizing: border-box;
+  cursor: default;
+  margin: 0;
+  padding: 0;
+  font-family: "Roboto";
+  outline: none;
+  -webkit-tap-highlight-color: rgba(255, 255, 255, 0);
+  caret-color: transparent;
+}
+
+html {
+  position: relative;
+  margin: 0;
+  padding: 0;
+  font-size: 62.5%;
+  background-color: hsl(0, 0%, 100%);
+}
+
+body {
+  width: 100%;
+  height: 100%;
+  min-height: 100vh;
+  margin: 0;
+  padding: 0;
+  scroll-behavior: smooth;
+  background-attachment: fixed;
+  color: rgb(33, 33, 33);
+  background-color: rgb(240, 240, 240);
+}
+
+.link, a {
+  text-decoration: none;
+  color: rgb(33, 33, 33);
+  cursor: pointer;
+}
+
+.app {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+button {
+  cursor: pointer;
+}
+
+.page-section-title {
+  font-size: 2.4rem;
+  margin: 3rem 0 3rem 0;
+}
+
+.visible {
+  opacity: 1;
+}
+
+h2 {
+  font-size: 2rem;
+}
+
+.round {
+  border-radius: 50%;
+}
+
+.home-container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 0;
+}
+.home-container .header {
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 0;
+  flex-direction: column-reverse;
+}
+.home-container .header .hero-image {
+  width: 100%;
+  height: 30rem;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
+}
+.home-container .header .header-text-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 2rem;
+  z-index: 1;
+  max-width: 75rem;
+  padding: 2rem;
+}
+.home-container .header .header-text-container .header-text-title {
+  color: #32329b;
+  font-family: "Poppins";
+  font-weight: 600;
+  font-size: 2rem;
+  font-style: normal;
+}
+.home-container .header .header-text-container .header-text-description {
+  color: rgb(58, 56, 56);
+  font-family: "Poppins";
+  font-weight: 400;
+  font-size: 1.5rem;
+  font-style: normal;
+  line-height: 2.6rem;
+}
+.home-container .header .header-text-container .header-link {
+  color: #32329b;
+  font-family: "Poppins";
+  font-weight: 600;
+  font-size: 1.8rem;
+  font-style: normal;
+  border: 0.3rem solid #32329b;
+  border-radius: 0.4rem;
+  padding: 0.8rem;
+  transition: all 0.1s linear;
+}
+.home-container .header .header-text-container .header-link:hover {
+  background-color: #32329b;
+  color: white;
+  border: 0.3rem solid #32329b;
+}
+.home-container .header .header-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: undefined;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  background: rgb(223, 223, 221);
+  background: linear-gradient(90deg, rgb(223, 223, 221) 10%, rgba(255, 255, 255, 0) 100%);
+  z-index: 1;
+  display: none;
+}
+.home-container .product-preview-container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 0rem;
+  padding: 2rem;
+}
+.home-container .product-preview-container .product-image {
+  width: 25rem;
+  height: auto;
+}
+.home-container .product-preview-container .product-detail-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  max-width: 85rem;
+}
+.home-container .product-preview-container .product-title {
+  color: rgb(58, 56, 56);
+  font-family: "Poppins";
+  font-weight: 400;
+  font-size: 3rem;
+  font-style: normal;
+}
+.home-container .product-preview-container .product-title span {
+  color: rgb(58, 56, 56);
+  font-family: "Poppins";
+  font-weight: 600;
+  font-size: 3rem;
+  font-style: normal;
+}
+.home-container .product-preview-container .product-description {
+  color: rgb(58, 56, 56);
+  font-family: "Poppins";
+  font-weight: 400;
+  font-size: 1.6rem;
+  font-style: normal;
+}
+.home-container .product-preview-container .product-features {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 1.8rem;
+  padding: 2rem;
+}
+.home-container .product-preview-container .product-features .product-feature {
+  color: rgb(58, 56, 56);
+  font-family: "Poppins";
+  font-weight: 400;
+  font-size: 1.4rem;
+  font-style: normal;
+  line-height: 2.5rem;
+}
+.home-container .testimonials-container {
+  width: 100%;
+  height: 100%;
+  max-width: 130rem;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 0;
+}
+.home-container .testimonials-container .testimonial-image {
+  width: 100%;
+  height: auto;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
+  border-radius: 0.4rem;
+  margin-top: 2rem;
+}
+.home-container .testimonials-container div {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 1rem;
+  max-width: 75rem;
+}
+.home-container .testimonials-container div .testimonial-title {
+  color: rgb(58, 56, 56);
+  font-family: "Poppins";
+  font-weight: 600;
+  font-size: 1.8rem;
+  font-style: normal;
+}
+.home-container .testimonials-container div .testimonial-description {
+  color: rgb(58, 56, 56);
+  font-family: "Poppins";
+  font-weight: 400;
+  font-size: 1.6rem;
+  font-style: normal;
+  line-height: 2.8rem;
+}
+.home-container .testimonials-container div .signature {
+  color: rgb(58, 56, 56);
+  font-family: "Poppins";
+  font-weight: 600;
+  font-size: 1.6rem;
+  font-style: normal;
+}
+.home-container .testimonials-container div .signature span {
+  color: rgb(58, 56, 56);
+  font-family: "Poppins";
+  font-weight: 400;
+  font-size: 1.4rem;
+  font-style: italic;
+}
+.home-container .testimonials-container.coo {
+  margin-bottom: 5rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 2%;
+}
+
+.leitmotiv {
+  color: rgb(58, 56, 56);
+  font-family: "Poppins";
+  font-weight: 600;
+  font-size: 1.8rem;
+  font-style: italic;
+}
+
+@media only screen and (min-width: 1000px) {
+  .home-container {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 0;
+  }
+  .home-container .header {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 0;
+    position: relative;
+    padding: 10%;
+  }
+  .home-container .header .hero-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    -o-object-fit: cover;
+       object-fit: cover;
+    -o-object-position: top;
+       object-position: top;
+    z-index: 0;
+  }
+  .home-container .header .header-text-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 2rem;
+    z-index: 1;
+    max-width: 75rem;
+  }
+  .home-container .header .header-text-container .header-text-title {
+    color: #32329b;
+    font-family: "Poppins";
+    font-weight: 600;
+    font-size: 5rem;
+    font-style: normal;
+  }
+  .home-container .header .header-text-container .header-text-description {
+    color: rgb(58, 56, 56);
+    font-family: "Poppins";
+    font-weight: 400;
+    font-size: 2rem;
+    font-style: normal;
+    line-height: 3.5rem;
+  }
+  .home-container .header .header-text-container .header-link {
+    color: #32329b;
+    font-family: "Poppins";
+    font-weight: 600;
+    font-size: 1.8rem;
+    font-style: normal;
+    border: 0.3rem solid #32329b;
+    border-radius: 0.4rem;
+    padding: 0.8rem;
+    transition: all 0.1s linear;
+  }
+  .home-container .header .header-text-container .header-link:hover {
+    background-color: #32329b;
+    color: white;
+    border: 0.3rem solid #32329b;
+  }
+  .home-container .header .header-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: undefined;
+    bottom: 0;
+    width: 80%;
+    height: 100%;
+    background: rgb(223, 223, 221);
+    background: linear-gradient(90deg, rgb(223, 223, 221) 11%, rgba(255, 255, 255, 0) 100%);
+    z-index: 1;
+    display: block;
+  }
+  .home-container .product-preview-container {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 10rem;
+    padding: 5rem 2%;
+  }
+  .home-container .product-preview-container .product-image {
+    width: 30rem;
+    height: auto;
+  }
+  .home-container .product-preview-container .product-detail-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 3rem;
+    max-width: 85rem;
+  }
+  .home-container .product-preview-container .product-title {
+    color: rgb(58, 56, 56);
+    font-family: "Poppins";
+    font-weight: 400;
+    font-size: 5rem;
+    font-style: normal;
+  }
+  .home-container .product-preview-container .product-title span {
+    color: rgb(58, 56, 56);
+    font-family: "Poppins";
+    font-weight: 600;
+    font-size: 5rem;
+    font-style: normal;
+  }
+  .home-container .product-preview-container .product-description {
+    color: rgb(58, 56, 56);
+    font-family: "Poppins";
+    font-weight: 400;
+    font-size: 1.8rem;
+    font-style: normal;
+  }
+  .home-container .product-preview-container .product-features {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 2rem;
+  }
+  .home-container .product-preview-container .product-features .product-feature {
+    color: rgb(58, 56, 56);
+    font-family: "Poppins";
+    font-weight: 400;
+    font-size: 1.6rem;
+    font-style: normal;
+    line-height: 2.5rem;
+  }
+  .home-container .testimonials-container {
+    width: 100%;
+    height: 100%;
+    max-width: 130rem;
+    padding: 2%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    gap: 2%;
+    margin-top: 5rem;
+  }
+  .home-container .testimonials-container .testimonial-image {
+    width: auto;
+    height: 40rem;
+    border-radius: 0.6rem;
+  }
+  .home-container .testimonials-container div {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 2rem;
+    max-width: 75rem;
+  }
+  .home-container .testimonials-container div .testimonial-title {
+    color: rgb(58, 56, 56);
+    font-family: "Poppins";
+    font-weight: 600;
+    font-size: 3rem;
+    font-style: normal;
+  }
+  .home-container .testimonials-container div .testimonial-description {
+    color: rgb(58, 56, 56);
+    font-family: "Poppins";
+    font-weight: 400;
+    font-size: 1.8rem;
+    font-style: normal;
+    line-height: 3rem;
+  }
+  .home-container .testimonials-container div .signature {
+    color: rgb(58, 56, 56);
+    font-family: "Poppins";
+    font-weight: 600;
+    font-size: 1.8rem;
+    font-style: normal;
+  }
+  .home-container .testimonials-container div .signature span {
+    color: rgb(58, 56, 56);
+    font-family: "Poppins";
+    font-weight: 400;
+    font-size: 1.4rem;
+    font-style: italic;
+  }
+  .home-container .testimonials-container.coo {
+    margin-bottom: 5rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 2%;
+  }
+  .leitmotiv {
+    color: rgb(58, 56, 56);
+    font-family: "Poppins";
+    font-weight: 600;
+    font-size: 2rem;
+    font-style: italic;
+  }
+}
+.dashboard-container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 2rem;
+  background-color: rgb(240, 240, 240);
+  padding: 1rem 1rem 3rem 1rem;
+}
+.dashboard-container .page-title {
+  color: rgb(58, 56, 56);
+  font-family: "Poppins";
+  font-weight: 400;
+  font-size: 1.8rem;
+  font-style: normal;
+  padding: 1rem 0 0 0;
+}
+.dashboard-container .panels-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 2rem;
+  width: 100%;
+  height: 100%;
+}
+.dashboard-container .panels-container .user-panel {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 0;
+  box-shadow: 2px 8px 14px 2px rgba(0, 0, 0, 0.22);
+  background-color: white;
+  width: 30%;
+  border-radius: 0.4rem;
+}
+.dashboard-container .panels-container .user-panel h2 {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 0;
+  color: hsl(0, 0%, 100%);
+  font-family: "Poppins";
+  font-weight: 400;
+  font-size: 1.6rem;
+  font-style: normal;
+  width: 100%;
+  height: 3.6rem;
+  padding-left: 1rem;
+  background-color: #32329b;
+  border-radius: 0.4rem 0.4rem 0 0;
+}
+.dashboard-container .panels-container .user-panel .information-container {
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: space-betwwen;
+  gap: 0.4rem;
+  width: 100%;
+  height: 100%;
+}
+.dashboard-container .panels-container .user-panel .information-container p {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0;
+  width: 100%;
+  height: 100%;
+  color: rgb(33, 33, 33);
+  font-family: "Poppins";
+  font-weight: 400;
+  font-size: 1.6rem;
+  font-style: normal;
+}
+.dashboard-container .panels-container .user-panel .information-container p span {
+  font-weight: 600;
+}
+.dashboard-container .panels-container .search-container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 0;
+  box-shadow: 2px 8px 14px 2px rgba(0, 0, 0, 0.22);
+  background-color: white;
+  border-radius: 0.4rem;
+}
+.dashboard-container .panels-container .search-container h2 {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 0;
+  color: hsl(0, 0%, 100%);
+  font-family: "Poppins";
+  font-weight: 400;
+  font-size: 1.6rem;
+  font-style: normal;
+  width: 100%;
+  height: 3.6rem;
+  padding-left: 1rem;
+  background-color: #32329b;
+  border-radius: 0.4rem 0.4rem 0 0;
+}
+.dashboard-container .panels-container .search-container p {
+  color: rgb(33, 33, 33);
+  font-family: "Poppins";
+  font-weight: 400;
+  font-size: 1.4rem;
+  font-style: normal;
+  padding: 2rem 1rem 2rem 1rem;
+  max-width: 75rem;
+}
+.dashboard-container .panels-container .search-container .search-form {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-end;
+  gap: 2rem;
+  width: 100%;
+  height: 100%;
+  max-width: 40rem;
+  border: 0.2rem solid rgba(50, 50, 155, 0.8);
+  border-radius: 0.6rem;
+  padding: 2rem;
+  margin: 1rem 1rem 2rem 1rem;
+}
+.dashboard-container .panels-container .search-container .search-form .input-container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+}
+.dashboard-container .panels-container .search-container .search-form .input-container label {
+  color: rgb(33, 33, 33);
+  font-family: "Poppins";
+  font-weight: 400;
+  font-size: 1.4rem;
+  font-style: normal;
+}
+.dashboard-container .panels-container .search-container .search-form .input-container .input-field {
+  background-color: transparent;
+  outline: none;
+  border: 0.1rem solid rgba(33, 33, 33, 0.5);
+  width: 50%;
+  height: 3.5rem;
+  border-radius: 0.4rem;
+  caret-color: black;
+  padding: 0.5rem;
+  color: rgb(33, 33, 33);
+  font-family: "Poppins";
+  font-weight: 400;
+  font-size: 1.4rem;
+  font-style: normal;
+  cursor: text;
+}
+.dashboard-container .panels-container .search-container .buttons-container {
+  padding-left: 0;
+  padding-top: 2rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 1.5rem;
+}
+.dashboard-container .panels-container .search-container .buttons-container button {
+  background-color: #32329b;
+  color: white;
+  font-family: "Poppins";
+  font-weight: 400;
+  font-size: 1.4rem;
+  font-style: normal;
+  border: none;
+  padding: 0.8rem 2rem;
+  border-radius: 0.6rem;
+}
+.dashboard-container .panels-container .search-container .buttons-container .link {
+  color: #32329b;
+  font-family: "Poppins";
+  font-weight: 400;
+  font-size: 1.3rem;
+  font-style: normal;
+}
+.dashboard-container .result-container {
+  width: 100%;
+  height: 100%;
+}
+.dashboard-container .result-container h2 {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 0;
+  color: hsl(0, 0%, 100%);
+  font-family: "Poppins";
+  font-weight: 400;
+  font-size: 1.6rem;
+  font-style: normal;
+  width: 100%;
+  height: 3.6rem;
+  padding-left: 1rem;
+  background-color: #32329b;
+  border-radius: 0.4rem 0.4rem 0 0;
+}
+
+.page-container {
+  width: 100%;
+  height: 100%;
+  background-color: rgb(240, 240, 240);
+  padding: 9rem 1rem 3rem 1rem;
+  max-height: 100vh;
+}
+.page-container .page-title {
+  width: 100%;
+  height: auto;
+  color: rgb(33, 33, 33);
+  font-family: "Poppins";
+  font-weight: 500;
+  font-size: 2rem;
+  font-style: normal;
+  padding: 1.5rem 0 1.5rem 0;
+}
+.page-container .login-section {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 2rem;
+}
+.page-container .login-section .intro-container, .page-container .login-section .login-form-container {
+  width: 100%;
+  height: 100%;
+  border-radius: 0.4rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 0;
+  flex-wrap: wrap;
+  background-color: hsl(0, 0%, 100%);
+  box-shadow: 2px 8px 14px 2px rgba(0, 0, 0, 0.22);
+}
+.page-container .login-section .intro-container h2, .page-container .login-section .login-form-container h2 {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 0;
+  color: hsl(0, 0%, 100%);
+  font-family: "Poppins";
+  font-weight: 400;
+  font-size: 1.6rem;
+  font-style: normal;
+  width: 100%;
+  height: 3.6rem;
+  padding-left: 1rem;
+  background-color: #5C7CFA;
+  border-radius: 0.4rem 0.4rem 0 0;
+}
+.page-container .login-section .intro-container .intro-image, .page-container .login-section .login-form-container .intro-image {
+  width: 20%;
+  height: auto;
+  padding: 1%;
+}
+.page-container .login-section .intro-container .intro-container-content, .page-container .login-section .login-form-container .intro-container-content {
+  width: 80%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 2rem;
+  padding: 1rem;
+}
+.page-container .login-section .intro-container .intro-container-content p, .page-container .login-section .login-form-container .intro-container-content p {
+  color: rgb(33, 33, 33);
+  font-family: "Poppins";
+  font-weight: 400;
+  font-size: 1.2rem;
+  font-style: normal;
+}
+.page-container .login-section .intro-container .login-form, .page-container .login-section .login-form-container .login-form {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 1rem;
+  width: 100%;
+  height: 100%;
+  padding: 1.5rem;
+}
+.page-container .login-section .intro-container .login-form .input-container, .page-container .login-section .login-form-container .login-form .input-container {
+  padding-left: 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 1rem;
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+.page-container .login-section .intro-container .login-form .input-container .input-label, .page-container .login-section .login-form-container .login-form .input-container .input-label {
+  width: 50%;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 0;
+  color: rgb(33, 33, 33);
+  font-family: "Poppins";
+  font-weight: 400;
+  font-size: 1.2rem;
+  font-style: normal;
+}
+.page-container .login-section .intro-container .login-form .input-container .input-field, .page-container .login-section .login-form-container .login-form .input-container .input-field {
+  background-color: transparent;
+  outline: none;
+  border: 0.1rem solid rgba(33, 33, 33, 0.5);
+  width: 50%;
+  height: 3.5rem;
+  border-radius: 0.4rem;
+  caret-color: black;
+  padding: 0.5rem;
+  color: rgb(33, 33, 33);
+  font-family: "Poppins";
+  font-weight: 400;
+  font-size: 1.4rem;
+  font-style: normal;
+  cursor: text;
+}
+.page-container .login-section .intro-container .login-form .checkbox-container, .page-container .login-section .login-form-container .login-form .checkbox-container {
+  padding-left: 0;
+  padding-top: 2rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 1rem;
+}
+.page-container .login-section .intro-container .login-form .checkbox-container input, .page-container .login-section .login-form-container .login-form .checkbox-container input {
+  cursor: pointer;
+}
+.page-container .login-section .intro-container .login-form .checkbox-container p, .page-container .login-section .login-form-container .login-form .checkbox-container p {
+  flex: 1;
+  color: rgb(33, 33, 33);
+  font-family: "Poppins";
+  font-weight: 400;
+  font-size: 1.3rem;
+  font-style: normal;
+}
+.page-container .login-section .intro-container .login-form .register-link, .page-container .login-section .login-form-container .login-form .register-link {
+  padding-left: 0;
+  padding-top: 2rem;
+  color: rgb(33, 33, 33);
+  font-family: "Poppins";
+  font-weight: 400;
+  font-size: 1.3rem;
+  font-style: normal;
+}
+.page-container .login-section .intro-container .login-form .register-link .link, .page-container .login-section .login-form-container .login-form .register-link .link {
+  color: #32329b;
+  font-family: "Poppins";
+  font-weight: 400;
+  font-size: 1.3rem;
+  font-style: normal;
+}
+.page-container .login-section .intro-container .login-form .buttons-container, .page-container .login-section .login-form-container .login-form .buttons-container {
+  padding-left: 0;
+  padding-top: 2rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 1.5rem;
+}
+.page-container .login-section .intro-container .login-form .buttons-container button, .page-container .login-section .login-form-container .login-form .buttons-container button {
+  background-color: #32329b;
+  color: white;
+  font-family: "Poppins";
+  font-weight: 400;
+  font-size: 1.4rem;
+  font-style: normal;
+  border: none;
+  padding: 0.8rem 2rem;
+  border-radius: 0.6rem;
+}
+.page-container .login-section .intro-container .login-form .buttons-container .link, .page-container .login-section .login-form-container .login-form .buttons-container .link {
+  color: #32329b;
+  font-family: "Poppins";
+  font-weight: 400;
+  font-size: 1.3rem;
+  font-style: normal;
+}
+
+@media only screen and (min-width: 1000px) {
+  .page-container {
+    width: 100%;
+    height: 100%;
+    background-color: rgb(240, 240, 240);
+    padding: 2rem 3rem 15rem 3rem;
+    max-height: 100vh;
+  }
+  .page-container .page-title {
+    width: 100%;
+    height: auto;
+    color: rgb(33, 33, 33);
+    font-family: "Poppins";
+    font-weight: 500;
+    font-size: 2rem;
+    font-style: normal;
+    padding: 0 0 2rem 0;
+  }
+  .page-container .login-section {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 0;
+  }
+  .page-container .login-section .intro-container, .page-container .login-section .login-form-container {
+    border-radius: 0.4rem;
+    width: 48%;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 0;
+    flex-wrap: wrap;
+    background-color: hsl(0, 0%, 100%);
+    box-shadow: 2px 8px 14px 2px rgba(0, 0, 0, 0.22);
+  }
+  .page-container .login-section .intro-container h2, .page-container .login-section .login-form-container h2 {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 0;
+    color: hsl(0, 0%, 100%);
+    font-family: "Poppins";
+    font-weight: 400;
+    font-size: 1.6rem;
+    font-style: normal;
+    width: 100%;
+    height: 3.6rem;
+    padding-left: 1rem;
+    background-color: #32329b;
+    border-radius: 0.4rem 0.4rem 0 0;
+  }
+  .page-container .login-section .intro-container .intro-image, .page-container .login-section .login-form-container .intro-image {
+    width: 20%;
+    height: auto;
+    padding: 2rem;
+  }
+  .page-container .login-section .intro-container .intro-container-content, .page-container .login-section .login-form-container .intro-container-content {
+    width: 80%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 2rem;
+    padding: 1rem;
+  }
+  .page-container .login-section .intro-container .intro-container-content p, .page-container .login-section .login-form-container .intro-container-content p {
+    color: rgb(33, 33, 33);
+    font-family: "Poppins";
+    font-weight: 400;
+    font-size: 1.4rem;
+    font-style: normal;
+  }
+  .page-container .login-section .intro-container .login-form, .page-container .login-section .login-form-container .login-form {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 1rem;
+    width: 100%;
+    height: 100%;
+    padding: 1.5rem;
+  }
+  .page-container .login-section .intro-container .login-form .input-container, .page-container .login-section .login-form-container .login-form .input-container {
+    width: auto;
+    height: auto;
+    padding-left: 16rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 1rem;
+    position: relative;
+  }
+  .page-container .login-section .intro-container .login-form .input-container .input-label, .page-container .login-section .login-form-container .login-form .input-container .input-label {
+    width: 15rem;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 0;
+    color: rgb(33, 33, 33);
+    font-family: "Poppins";
+    font-weight: 400;
+    font-size: 1.4rem;
+    font-style: normal;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+  }
+  .page-container .login-section .intro-container .login-form .input-container .input-field, .page-container .login-section .login-form-container .login-form .input-container .input-field {
+    background-color: transparent;
+    outline: none;
+    border: 0.1rem solid rgba(33, 33, 33, 0.5);
+    width: 19rem;
+    height: 3.5rem;
+    border-radius: 0.4rem;
+    caret-color: black;
+    padding: 0.5rem;
+    color: rgb(33, 33, 33);
+    font-family: "Poppins";
+    font-weight: 400;
+    font-size: 1.4rem;
+    font-style: normal;
+    cursor: text;
+  }
+  .page-container .login-section .intro-container .login-form .checkbox-container, .page-container .login-section .login-form-container .login-form .checkbox-container {
+    padding-left: 16rem;
+    padding-top: 0.8rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 1rem;
+  }
+  .page-container .login-section .intro-container .login-form .checkbox-container input, .page-container .login-section .login-form-container .login-form .checkbox-container input {
+    cursor: pointer;
+  }
+  .page-container .login-section .intro-container .login-form .checkbox-container p, .page-container .login-section .login-form-container .login-form .checkbox-container p {
+    flex: 1;
+    color: rgb(33, 33, 33);
+    font-family: "Poppins";
+    font-weight: 400;
+    font-size: 1.3rem;
+    font-style: normal;
+  }
+  .page-container .login-section .intro-container .login-form .register-link, .page-container .login-section .login-form-container .login-form .register-link {
+    padding-left: 16rem;
+    padding-top: 0.8rem;
+    color: rgb(33, 33, 33);
+    font-family: "Poppins";
+    font-weight: 400;
+    font-size: 1.3rem;
+    font-style: normal;
+  }
+  .page-container .login-section .intro-container .login-form .register-link .link, .page-container .login-section .login-form-container .login-form .register-link .link {
+    color: #32329b;
+    font-family: "Poppins";
+    font-weight: 400;
+    font-size: 1.3rem;
+    font-style: normal;
+  }
+  .page-container .login-section .intro-container .login-form .login-error, .page-container .login-section .login-form-container .login-form .login-error {
+    color: red;
+    font-family: "Poppins";
+    font-weight: 400;
+    font-size: 1.2rem;
+    font-style: normal;
+    padding-left: 16rem;
+  }
+  .page-container .login-section .intro-container .login-form .buttons-container, .page-container .login-section .login-form-container .login-form .buttons-container {
+    padding-left: 16rem;
+    padding-top: 0.8rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 1.5rem;
+  }
+  .page-container .login-section .intro-container .login-form .buttons-container button, .page-container .login-section .login-form-container .login-form .buttons-container button {
+    background-color: #32329b;
+    color: white;
+    font-family: "Poppins";
+    font-weight: 400;
+    font-size: 1.4rem;
+    font-style: normal;
+    border: none;
+    padding: 0.8rem 2rem;
+    border-radius: 0.6rem;
+  }
+  .page-container .login-section .intro-container .login-form .buttons-container .link, .page-container .login-section .login-form-container .login-form .buttons-container .link {
+    color: #32329b;
+    font-family: "Poppins";
+    font-weight: 400;
+    font-size: 1.3rem;
+    font-style: normal;
+  }
+}
+.page-container {
+  width: 100%;
+  height: 100%;
+  background-color: rgb(240, 240, 240);
+  padding: 9rem 1rem 3rem 1rem;
+  min-height: 100vh;
+}
+.page-container .page-title {
+  width: 100%;
+  height: auto;
+  color: rgb(33, 33, 33);
+  font-family: "Poppins";
+  font-weight: 500;
+  font-size: 2rem;
+  font-style: normal;
+  padding: 1.5rem 0 1.5rem 0;
+}
+.page-container .register-section {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 2rem;
+}
+.page-container .register-section .intro-container, .page-container .register-section .register-form-container {
+  width: 100%;
+  height: 100%;
+  border-radius: 0.4rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 0;
+  flex-wrap: wrap;
+  background-color: hsl(0, 0%, 100%);
+  box-shadow: 2px 8px 14px 2px rgba(0, 0, 0, 0.22);
+}
+.page-container .register-section .intro-container h2, .page-container .register-section .register-form-container h2 {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 0;
+  color: hsl(0, 0%, 100%);
+  font-family: "Poppins";
+  font-weight: 400;
+  font-size: 1.6rem;
+  font-style: normal;
+  width: 100%;
+  height: 3.6rem;
+  padding-left: 1rem;
+  background-color: #32329b;
+  border-radius: 0.4rem 0.4rem 0 0;
+}
+.page-container .register-section .intro-container .intro-container-content, .page-container .register-section .register-form-container .intro-container-content {
+  width: 80%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 2rem;
+  padding: 1rem;
+}
+.page-container .register-section .intro-container .intro-container-content p, .page-container .register-section .register-form-container .intro-container-content p {
+  color: rgb(33, 33, 33);
+  font-family: "Poppins";
+  font-weight: 400;
+  font-size: 1.2rem;
+  font-style: normal;
+}
+.page-container .register-section .intro-container .register-form, .page-container .register-section .register-form-container .register-form {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 1rem;
+  width: 100%;
+  height: 100%;
+  padding: 1.5rem;
+}
+.page-container .register-section .intro-container .register-form .input-container, .page-container .register-section .register-form-container .register-form .input-container {
+  padding-left: 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 1rem;
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+.page-container .register-section .intro-container .register-form .input-container .input-label, .page-container .register-section .register-form-container .register-form .input-container .input-label {
+  width: 50%;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 0;
+  color: rgb(33, 33, 33);
+  font-family: "Poppins";
+  font-weight: 400;
+  font-size: 1.2rem;
+  font-style: normal;
+}
+.page-container .register-section .intro-container .register-form .input-container .input-field, .page-container .register-section .register-form-container .register-form .input-container .input-field {
+  background-color: transparent;
+  outline: none;
+  border: 0.1rem solid rgba(33, 33, 33, 0.5);
+  width: 50%;
+  height: 3.5rem;
+  border-radius: 0.4rem;
+  caret-color: black;
+  padding: 0.5rem;
+  color: rgb(33, 33, 33);
+  font-family: "Poppins";
+  font-weight: 400;
+  font-size: 1.4rem;
+  font-style: normal;
+  cursor: text;
+}
+.page-container .register-section .intro-container .register-form .buttons-container, .page-container .register-section .register-form-container .register-form .buttons-container {
+  padding-left: 0;
+  padding-top: 2rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 1.5rem;
+}
+.page-container .register-section .intro-container .register-form .buttons-container button, .page-container .register-section .register-form-container .register-form .buttons-container button {
+  background-color: #32329b;
+  color: white;
+  font-family: "Poppins";
+  font-weight: 400;
+  font-size: 1.4rem;
+  font-style: normal;
+  border: none;
+  padding: 0.8rem 2rem;
+  border-radius: 0.6rem;
+}
+.page-container .register-section .intro-container .register-form .buttons-container .link, .page-container .register-section .register-form-container .register-form .buttons-container .link {
+  color: #32329b;
+  font-family: "Poppins";
+  font-weight: 400;
+  font-size: 1.3rem;
+  font-style: normal;
+}
+
+@media only screen and (min-width: 1000px) {
+  .page-container {
+    width: 100%;
+    height: 100%;
+    background-color: rgb(240, 240, 240);
+    padding: 2rem 3rem 15rem 3rem;
+    max-height: 100vh;
+  }
+  .page-container .page-title {
+    width: 100%;
+    height: auto;
+    color: rgb(33, 33, 33);
+    font-family: "Poppins";
+    font-weight: 500;
+    font-size: 2rem;
+    font-style: normal;
+    padding: 0 0 2rem 0;
+  }
+  .page-container .register-section {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 0;
+  }
+  .page-container .register-section .intro-container, .page-container .register-section .register-form-container {
+    border-radius: 0.4rem;
+    width: 48%;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 0;
+    flex-wrap: wrap;
+    background-color: hsl(0, 0%, 100%);
+    box-shadow: 2px 8px 14px 2px rgba(0, 0, 0, 0.22);
+  }
+  .page-container .register-section .intro-container h2, .page-container .register-section .register-form-container h2 {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 0;
+    color: hsl(0, 0%, 100%);
+    font-family: "Poppins";
+    font-weight: 400;
+    font-size: 1.6rem;
+    font-style: normal;
+    width: 100%;
+    height: 3.6rem;
+    padding-left: 1rem;
+    background-color: #32329b;
+    border-radius: 0.4rem 0.4rem 0 0;
+  }
+  .page-container .register-section .intro-container .intro-container-content, .page-container .register-section .register-form-container .intro-container-content {
+    width: 80%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 2rem;
+    padding: 1rem;
+  }
+  .page-container .register-section .intro-container .intro-container-content p, .page-container .register-section .register-form-container .intro-container-content p {
+    color: rgb(33, 33, 33);
+    font-family: "Poppins";
+    font-weight: 400;
+    font-size: 1.4rem;
+    font-style: normal;
+  }
+  .page-container .register-section .intro-container .register-form, .page-container .register-section .register-form-container .register-form {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 1rem;
+    width: 100%;
+    height: 100%;
+    padding: 1.5rem;
+  }
+  .page-container .register-section .intro-container .register-form .left-container, .page-container .register-section .intro-container .register-form .right-container, .page-container .register-section .register-form-container .register-form .left-container, .page-container .register-section .register-form-container .register-form .right-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-end;
+    gap: 1rem;
+  }
+  .page-container .register-section .intro-container .register-form .left-container .input-container, .page-container .register-section .intro-container .register-form .right-container .input-container, .page-container .register-section .register-form-container .register-form .left-container .input-container, .page-container .register-section .register-form-container .register-form .right-container .input-container {
+    width: auto;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 1rem;
+  }
+  .page-container .register-section .intro-container .register-form .left-container .input-container .input-label, .page-container .register-section .intro-container .register-form .right-container .input-container .input-label, .page-container .register-section .register-form-container .register-form .left-container .input-container .input-label, .page-container .register-section .register-form-container .register-form .right-container .input-container .input-label {
+    width: auto;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 0;
+    color: rgb(33, 33, 33);
+    font-family: "Poppins";
+    font-weight: 400;
+    font-size: 1.4rem;
+    font-style: normal;
+  }
+  .page-container .register-section .intro-container .register-form .left-container .input-container .input-field, .page-container .register-section .intro-container .register-form .right-container .input-container .input-field, .page-container .register-section .register-form-container .register-form .left-container .input-container .input-field, .page-container .register-section .register-form-container .register-form .right-container .input-container .input-field {
+    background-color: transparent;
+    outline: none;
+    border: 0.1rem solid rgba(33, 33, 33, 0.5);
+    width: 19rem;
+    height: 3.5rem;
+    border-radius: 0.4rem;
+    caret-color: black;
+    padding: 0.5rem;
+    color: rgb(33, 33, 33);
+    font-family: "Poppins";
+    font-weight: 400;
+    font-size: 1.4rem;
+    font-style: normal;
+    cursor: text;
+  }
+  .page-container .register-section .intro-container .register-form .left-container .login-error, .page-container .register-section .intro-container .register-form .right-container .login-error, .page-container .register-section .register-form-container .register-form .left-container .login-error, .page-container .register-section .register-form-container .register-form .right-container .login-error {
+    color: red;
+    font-family: "Poppins";
+    font-weight: 400;
+    font-size: 1.2rem;
+    font-style: normal;
+    padding-left: 16rem;
+  }
+}
+.about-container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 3rem;
+  padding: 1rem 1rem 3rem 1rem;
+  max-width: 110rem;
+}
+.about-container .page-title {
+  width: 100%;
+  height: auto;
+  color: rgb(33, 33, 33);
+  font-family: "Poppins";
+  font-weight: 600;
+  font-size: 2.5rem;
+  font-style: normal;
+  padding: 1.5rem 1.5rem 1.5rem 1.5rem;
+}
+.about-container .page-section {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 0;
+}
+.about-container .page-section .paragraphe-container {
+  padding: 0 1.5rem 0 1.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 1.5rem;
+  width: 50%;
+  height: 100%;
+}
+.about-container .page-section .paragraphe-container h2 {
+  color: rgb(58, 56, 56);
+  font-family: "Poppins";
+  font-weight: 400;
+  font-size: 2rem;
+  font-style: normal;
+}
+.about-container .page-section .paragraphe-container p {
+  color: rgb(58, 56, 56);
+  font-family: "Poppins";
+  font-weight: 400;
+  font-size: 1.5rem;
+  font-style: normal;
+}
+.about-container .page-section .paragraphe-container p span {
+  color: rgb(58, 56, 56);
+  font-family: "Poppins";
+  font-weight: 600;
+  font-size: 1.5rem;
+  font-style: normal;
+}
+.about-container .page-section .section-image {
+  width: 50%;
+  height: 100%;
+}
+
+.ressources-container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 2rem;
+  background-color: rgb(240, 240, 240);
+  padding: 1rem 1rem 3rem 1rem;
+  min-height: 100vh;
+}
+.ressources-container .page-title {
+  width: 100%;
+  height: auto;
+  color: rgb(33, 33, 33);
+  font-family: "Poppins";
+  font-weight: 500;
+  font-size: 2rem;
+  font-style: normal;
+  padding: 1.5rem 0 1.5rem 0;
+}
+.ressources-container .table-container {
+  width: 100%;
+  height: 100%;
+  background-color: white;
+  border-radius: 0.4rem;
+}
+.ressources-container .table-container .table-title {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 0;
+  color: hsl(0, 0%, 100%);
+  font-family: "Poppins";
+  font-weight: 400;
+  font-size: 1.6rem;
+  font-style: normal;
+  width: 100%;
+  height: 3.6rem;
+  padding-left: 1rem;
+  background-color: #32329b;
+  border-radius: 0.4rem 0.4rem 0 0;
+}
+.ressources-container .table-container .table {
+  padding: 1rem;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 0;
+}
+.ressources-container .table-container .table .table-header {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0;
+}
+.ressources-container .table-container .table .table-header p {
+  color: rgb(33, 33, 33);
+  font-family: "Poppins";
+  font-weight: 400;
+  font-size: 1.6rem;
+  font-style: normal;
+}
+.ressources-container .table-container .table .table-content {
+  width: 100%;
+  height: 100%;
+}
+.ressources-container .table-container .table .table-content .table-row {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 0;
+}
+.ressources-container .table-container .table .table-content .table-row p {
+  color: rgb(33, 33, 33);
+  font-family: "Poppins";
+  font-weight: 400;
+  font-size: 1.4rem;
+  font-style: normal;
+}
+.ressources-container .tab-container {
+  width: 100%;
+  height: 100%;
+  background-color: white;
+  box-shadow: 2px 8px 14px 2px rgba(0, 0, 0, 0.22);
+}
+.ressources-container .tab-container h2 {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 0;
+  color: hsl(0, 0%, 100%);
+  font-family: "Poppins";
+  font-weight: 400;
+  font-size: 1.6rem;
+  font-style: normal;
+  width: 100%;
+  height: 3.6rem;
+  padding-left: 1rem;
+  background-color: #32329b;
+  border-radius: 0.4rem 0.4rem 0 0;
+}
+.ressources-container .tab-container table {
+  padding: 1rem;
+  width: 100%;
+  height: 100%;
+  border-collapse: separate;
+  border-spacing: 1.5rem;
+}
+.ressources-container .tab-container table thead .column-header {
+  color: rgb(33, 33, 33);
+  font-family: "Poppins";
+  font-weight: 400;
+  font-size: 1.6rem;
+  font-style: normal;
+  text-align: start;
+}
+.ressources-container .tab-container table tbody .table-row {
+  color: rgb(33, 33, 33);
+  font-family: "Poppins";
+  font-weight: 400;
+  font-size: 1.4rem;
+  font-style: normal;
+}
+.navbar-container-mobile {
+  width: 100%;
+  height: 7rem;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  box-shadow: 2px 10px 14px 2px rgba(0, 0, 0, 0.22);
+  background-color: whiteSmoke;
+  transition: all 0.3s linear;
+  overflow-y: hidden;
+  z-index: 10;
+}
+.navbar-container-mobile.expand {
+  height: 30rem;
+}
+.navbar-container-mobile .top-container {
+  width: 100%;
+  height: 7rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0;
+  padding: 0 1.5rem 0 1.5rem;
+  background-color: whiteSmoke;
+}
+.navbar-container-mobile .top-container .navbar-title-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 0.5rem;
+}
+.navbar-container-mobile .top-container .navbar-title-container .navbar-icon {
+  width: 5rem;
+  height: 5rem;
+}
+.navbar-container-mobile .top-container .navbar-title-container .navbar-title {
+  color: #32329b;
+  font-family: "Poppins";
+  font-weight: 600;
+  font-size: 1.6rem;
+  font-style: normal;
+}
+.navbar-container-mobile .top-container .navbar-title-container .navbar-subtitle {
+  color: #5C7CFA;
+  font-family: "Poppins";
+  font-weight: 400;
+  font-size: 1.4rem;
+  font-style: normal;
+}
+.navbar-container-mobile .top-container .navbar-btn {
+  width: 4rem;
+  height: 4rem;
+}
+.navbar-container-mobile .links-container-mobile {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 0;
+  width: 100%;
+  height: auto;
+  background-color: whiteSmoke;
+}
+.navbar-container-mobile .links-container-mobile .navbar-link {
+  width: 100%;
+  height: 100%;
+  color: #32329b;
+  font-family: "Poppins";
+  font-weight: 400;
+  font-size: 1.6rem;
+  font-style: normal;
+  padding: 1rem 2rem;
+}
+.navbar-container-mobile .links-container-mobile .navbar-link.login-btn, .navbar-container-mobile .links-container-mobile .navbar-link.logout-btn {
+  width: 12rem;
+  height: auto;
+  color: #32329b;
+  font-family: "Poppins";
+  font-weight: 600;
+  font-size: 1.4rem;
+  font-style: normal;
+  text-align: center;
+  align-self: center;
+  border: 0.1rem solid #32329b;
+  border-radius: 0.4rem;
+  padding: 0.5rem;
+  margin-bottom: 1.2rem;
+  cursor: pointer;
+  transition: all 0.2s linear;
+}
+.navbar-container-mobile .links-container-mobile .navbar-link.login-btn:hover, .navbar-container-mobile .links-container-mobile .navbar-link.logout-btn:hover {
+  background-color: #32329b;
+  color: white;
+}
+
+.navbar-bg {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(33, 33, 33, 0.5);
+  transition: all 0.2s linear;
+  opacity: 0;
+  z-index: 2;
+}
+.navbar-bg.expand {
+  opacity: 1;
+}
+
+.navbar-container-desktop {
+  width: 100%;
+  height: 9rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0;
+  box-shadow: 2px 10px 14px 2px rgba(0, 0, 0, 0.22);
+  background-color: whiteSmoke;
+  padding: 0 2rem 0 2rem;
+  z-index: 10;
+}
+.navbar-container-desktop .left-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 1rem;
+}
+.navbar-container-desktop .left-container .navbar-icon {
+  width: 5.3rem;
+  height: 5.3rem;
+}
+.navbar-container-desktop .left-container .navbar-title {
+  color: #32329b;
+  font-family: "Poppins";
+  font-weight: 600;
+  font-size: 2.4rem;
+  font-style: normal;
+}
+.navbar-container-desktop .left-container .navbar-subtitle {
+  color: #5C7CFA;
+  font-family: "Poppins";
+  font-weight: 400;
+  font-size: 1.6rem;
+  font-style: normal;
+}
+.navbar-container-desktop .links-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 2.2rem;
+}
+.navbar-container-desktop .links-container .navbar-link {
+  color: #32329b;
+  font-family: "Poppins";
+  font-weight: 400;
+  font-size: 1.8rem;
+  font-style: normal;
+  transition: all 0.1s linear;
+  cursor: pointer;
+}
+.navbar-container-desktop .links-container .navbar-link:hover {
+  font-weight: 600;
+}
+.navbar-container-desktop .links-container .navbar-link.login-btn, .navbar-container-desktop .links-container .navbar-link.logout-btn {
+  width: 12rem;
+  height: auto;
+  color: #32329b;
+  font-family: "Poppins";
+  font-weight: 600;
+  font-size: 1.4rem;
+  font-style: normal;
+  text-align: center;
+  align-self: center;
+  border: 0.1rem solid #32329b;
+  border-radius: 0.4rem;
+  padding: 0.5rem;
+  cursor: pointer;
+  transition: all 0.2s linear;
+}
+.navbar-container-desktop .links-container .navbar-link.login-btn:hover, .navbar-container-desktop .links-container .navbar-link.logout-btn:hover {
+  background-color: #32329b;
+  color: white;
+}
+
+footer {
+  width: 100%;
+  height: 100%;
+  border-top: 0.1rem solid rgba(33, 33, 33, 0.2);
+  background-color: rgb(240, 240, 240);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 0;
+  padding: 2rem;
+}
+footer .footer-content {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1.5rem;
+}
+footer .footer-content p {
+  color: hsl(0, 0%, 52%);
+  font-family: "Poppins";
+  font-weight: 400;
+  font-size: 1.2rem;
+  font-style: normal;
+}
+footer h2 {
+  color: hsl(0, 0%, 52%);
+  font-family: "Poppins";
+  font-weight: 600;
+  font-size: 2rem;
+  font-style: normal;
+  text-transform: uppercase;
+  margin-top: 2rem;
+}
+
+@media only screen and (min-width: 1000px) {
+  footer {
+    width: 100%;
+    height: 100%;
+    border-top: 0.1rem solid rgba(33, 33, 33, 0.2);
+    background-color: rgb(240, 240, 240);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 0;
+    padding: 2rem;
+  }
+  footer .footer-content {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 3rem;
+  }
+  footer .footer-content p {
+    color: hsl(0, 0%, 52%);
+    font-family: "Poppins";
+    font-weight: 500;
+    font-size: 1.3rem;
+    font-style: normal;
+  }
+  footer h2 {
+    color: hsl(0, 0%, 52%);
+    font-family: "Poppins";
+    font-weight: 600;
+    font-size: 2rem;
+    font-style: normal;
+    text-transform: uppercase;
+    margin-top: 2rem;
+  }
+}/*# sourceMappingURL=main.css.map */

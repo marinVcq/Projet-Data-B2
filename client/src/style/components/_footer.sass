@@ -1,0 +1,35 @@
+footer
+    @include width-height(100%,100%)
+    border-top: 0.1rem solid rgba($black, 0.2)
+    background-color: rgb(240,240,240)
+    @include flexbox(column, flex-start, center)
+    padding: 2rem
+
+    .footer-content
+        @include width-height(100%,100%)
+        @include flexbox(column, center, center, 1.5rem)
+        p
+            @include set-font($darkGray, "Poppins", 1.2rem, 400, normal)
+    h2
+        @include set-font($darkGray, "Poppins", 2rem, 600, normal)
+        text-transform: uppercase
+        margin-top: 2rem
+
+@include respond(desktop)
+    footer
+        @include width-height(100%,100%)
+        border-top: 0.1rem solid rgba($black, 0.2)
+        background-color: rgb(240,240,240)
+        @include flexbox(column, flex-start, center)
+        padding: 2rem
+
+        .footer-content
+            @include width-height(100%,100%)
+            @include flexbox(row, center, center, 3rem)
+            p
+                @include set-font($darkGray, "Poppins", 1.3rem, 500, normal)
+        h2
+            @include set-font($darkGray, "Poppins", 2rem, 600, normal)
+            text-transform: uppercase
+            margin-top: 2rem
+
