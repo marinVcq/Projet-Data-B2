@@ -9,12 +9,12 @@ export const AuthContextProvider = ({ children }) => {
   );
 
   const login = async (inputs) => {
-    const res = await axios.post("https://fortunato-api.onrender.com/auth/login", inputs);
+    const res = await axios.post("/auth/login", inputs);
     setCurrentUser(res.data);
   };
 
   const logout = async (inputs) => {
-    await axios.post("https://fortunato-api.onrender.com/auth/logout");
+    await axios.post("/auth/logout");
     setCurrentUser(null);
   };
 
