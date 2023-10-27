@@ -45,8 +45,14 @@ const Login = () => {
                 <img className="intro-image" src={IntroImage} alt='introduction'></img>
 
                 <div className='intro-container-content'>
-                    <p>Welcome on the Fortunato portal</p>
-                    <p>First time here ? Put a glance on <Link to='#'>The User Guide of the Fortunato Portal</Link></p>                    
+                    <p>Welcome to the Fortunato Employee Portal.</p>
+                    <p>
+                        First time here ? Put a glance on <Link to='#'>The User Guide of the Fortunato Portal</Link>
+                        This portal is dedicated to enhancing collaboration and efficiency within our organization. It provides employees with secure access to
+                         essential resources, facilitating seamless communication and streamlining day-to-day operations.
+                        Login to access personalized information and contribute to the collective success of our pharmaceutical endeavors.
+                        For assistance, please contact the IT department.
+                    </p>                    
                 </div>
             </div>
 
