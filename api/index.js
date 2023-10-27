@@ -18,14 +18,6 @@ app.use("/api/auth", authRoutes);
 app.use("/api/employees", employeeRoutes);
 
 
-// Error Handling Middleware
-app.use((err, req, res, next) => {
-    console.error(err.stack);
-    res.status(500).send('Something went wrong!');
-  });
-  
-const PORT = process.env.DB_PORT || 3000;
-
-app.listen(PORT, () => {
-console.log(`Server is running on port ${PORT}`);
+app.listen(process.env.DB_PORT, () => {
+    console.log("connected");
 });
