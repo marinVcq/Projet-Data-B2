@@ -20,7 +20,7 @@ const About = () => {
               In the midst of this dynamic landscape, a group of visionary pioneers laid the foundation for what would become a beacon of well-being <span>– Fortunato Pharmaceuticals.</span>
             </p>
           </div>
-          <img className='section-image' src={OldFactory}></img>
+          <img className='section-image' src={OldFactory} alt='section image'></img>
         </section>
 
 

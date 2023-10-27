@@ -4,11 +4,9 @@ import { AuthContext } from "../context/authContext";
 
 // Import assets
 import NavbarIcon from '../assets/shared/dna-icon.png'
-import UserIcon from '../assets/shared/user-icon.jpg'
 import BurgerBtn from '../assets/shared/menu-icon.png'
 
 const NavbarMobile = () => {
-  const location = useLocation();
   const [navbarExpand, setNavbarExpand] = useState(false);
   const [bodyScroll, setBodyScroll] = useState(true);
   const { currentUser, logout } = useContext(AuthContext);
@@ -21,7 +19,7 @@ const NavbarMobile = () => {
     }else{
       document.body.style.overflowY = 'scroll';
     }      
-  })
+  }, [navbarExpand, bodyScroll]) 
   
   const handleToggle = () => {
     setNavbarExpand(prev => !prev);
@@ -33,7 +31,7 @@ const NavbarMobile = () => {
 
           <div className='top-container'>
             <div className='navbar-title-container'>
-              <img className='navbar-icon' src={NavbarIcon}></img>
+              <img className='navbar-icon' src={NavbarIcon} alt="navigation icon"></img>
               <div>
                 <h2 className='navbar-title'>Fortunato</h2>
                 <p className='navbar-subtitle'>Pharmaceuticals</p>                 
@@ -60,15 +58,13 @@ const NavbarMobile = () => {
 
 // Desktop Navbar
 const NavbarDesktop = () => {
-  const location = useLocation();
-  const [isAuthenticated, setIsAuthenticated] = useState(false);
   const { currentUser, logout } = useContext(AuthContext);
 
   return(
     <div className="navbar-container-desktop">
 
       <div className='left-container'>
-        <img className='navbar-icon' src={NavbarIcon}></img>
+        <img className='navbar-icon' src={NavbarIcon} alt="navigation icon"></img>
         <div>
           <h2 className='navbar-title'>Fortunato</h2>
           <p className='navbar-subtitle'>Pharmaceuticals</p>                 

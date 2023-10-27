@@ -1,7 +1,6 @@
 import React from 'react'
-import {useState, useEffect, useContext} from 'react'
+import {useState, useContext} from 'react'
 import {Link, useNavigate} from 'react-router-dom'
-import axios from "axios"
 import { AuthContext } from "../context/authContext";
 
 
@@ -43,7 +42,7 @@ const Login = () => {
             <div className='intro-container'>
                 <h2>Information</h2>
 
-                <img className="intro-image" src={IntroImage} alt='introduction image'></img>
+                <img className="intro-image" src={IntroImage} alt='introduction'></img>
 
                 <div className='intro-container-content'>
                     <p>Welcome on the Fortunato portal</p>

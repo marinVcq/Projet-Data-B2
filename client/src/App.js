@@ -2,16 +2,10 @@
 import {
   createBrowserRouter,
   RouterProvider,
-  Route,
   Outlet,
-  createHashRouter,
-  useNavigate,
 } from "react-router-dom";
 
 import { useContext } from "react";
-
-// Import styles
-import "./style/main.css";
 
 // Import pages
 import Home from "./pages/Home";

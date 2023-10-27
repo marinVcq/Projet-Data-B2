@@ -1,10 +1,8 @@
 import React from 'react'
-import {useState, useEffect} from 'react'
 import {Link} from 'react-router-dom'
 
 // Import assets
 import HomeHeroImage from '../assets/home/hero-image.jpg'
-import COOImage from '../assets/home/bruce.jpg'
 import LigodoneImage from '../assets/home/pill-bottle.png'
 import TestimonyImage from '../assets/home/testimony.jpg'
 import Heart from '../assets/home/heart.png'
@@ -28,7 +26,7 @@ const Home = () => {
             <Link className="header-link" to='/contact'>Contact Us</Link>
           </div>
 
-          <img className='hero-image' src={HomeHeroImage}></img>
+          <img className='hero-image' src={HomeHeroImage} alt='hero image'></img>
 
         </header>
 
@@ -84,7 +82,7 @@ const Home = () => {
             </p>
             <p className='signature'>Peter M.</p>      
           </div>
-          <img className='testimonial-image' src={TestimonyImage} alt='COO Image'></img>
+          <img className='testimonial-image' src={TestimonyImage} alt='testimonial Image'></img>
         </section>
 
         <section className='testimonials-container coo'>

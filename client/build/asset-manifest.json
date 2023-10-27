@@ -1,11 +1,9 @@
 {
   "files": {
     "main.css": "/static/css/main.fa89588c.css",
-    "main.js": "/static/js/main.02e10b04.js",
+    "main.js": "/static/js/main.240a26eb.js",
     "static/media/testimony.jpg": "/static/media/testimony.c664415190680730eb8b.jpg",
-    "static/media/bruce.jpg": "/static/media/bruce.971835dffbf4d28379cc.jpg",
     "static/media/hero-image.jpg": "/static/media/hero-image.6c60f846fb16fa53ccff.jpg",
-    "static/media/user-icon.jpg": "/static/media/user-icon.c5a4821e43750ce84385.jpg",
     "static/media/factory.jpg": "/static/media/factory.30ddb2adfcec28115061.jpg",
     "static/media/pill-bottle.png": "/static/media/pill-bottle.641fc52d323a8c36cea6.png",
     "static/media/heart.png": "/static/media/heart.edd577bfb4bca6dc2e17.png",
@@ -13,10 +11,10 @@
     "static/media/intro-img.png": "/static/media/intro-img.cbb98bc8a334b58698aa.png",
     "index.html": "/index.html",
     "main.fa89588c.css.map": "/static/css/main.fa89588c.css.map",
-    "main.02e10b04.js.map": "/static/js/main.02e10b04.js.map"
+    "main.240a26eb.js.map": "/static/js/main.240a26eb.js.map"
   },
   "entrypoints": [
     "static/css/main.fa89588c.css",
-    "static/js/main.02e10b04.js"
+    "static/js/main.240a26eb.js"
   ]
 }
