@@ -8,28 +8,14 @@ export const AuthContextProvider = ({ children }) => {
     JSON.parse(localStorage.getItem("user")) || null
   );
 
-  const api = axios.create({
-    baseURL: "/api", // Relative URL for the proxy
-  });
-
   const login = async (inputs) => {
-    try {
-      const res = await api.post("https://fortunato-api.onrender.com/auth/login", inputs);
-      setCurrentUser(res.data);
-    } catch (error) {
-      // Handle login error
-      console.error("Login failed", error);
-    }
+    const res = await axios.post("https://fortunato-api.onrender.com/auth/login", inputs);
+    setCurrentUser(res.data);
   };
 
-  const logout = async () => {
-    try {
-      await api.post("https://fortunato-api.onrender.com/auth/logout");
-      setCurrentUser(null);
-    } catch (error) {
-      // Handle logout error
-      console.error("Logout failed", error);
-    }
+  const logout = async (inputs) => {
+    await axios.post("https://fortunato-api.onrender.com/auth/logout");
+    setCurrentUser(null);
   };
 
   useEffect(() => {
