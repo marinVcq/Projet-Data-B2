@@ -13,7 +13,7 @@ const Ressources = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const res = await axios.get('/labos');
+        const res = await axios.get('/api/labos');
         setLabos(res.data);
       } catch (err) {
         console.log(err);
@@ -25,7 +25,7 @@ const Ressources = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const res = await axios.get('/employees');
+        const res = await axios.get('/api/employees');
         setEmployees(res.data);
       } catch (err) {
         console.log(err);
