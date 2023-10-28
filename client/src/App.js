@@ -15,6 +15,12 @@ import Dashboard from "./pages/Dashboard";
 import Contact from "./pages/Contact";
 import About from "./pages/About";
 import Ressources from "./pages/Ressources";
+import Projects from "./pages/Projects";
+
+// Single page
+import Employee from "./pages/Employee"
+import Laboratory from "./pages/Laboratory"
+import Project from "./pages/Project"
 
 // Import components
 import Navbar from "./components/Navbar";
@@ -49,9 +55,17 @@ const App = () => {
         { path: "/dashboard", element: <Dashboard /> },
         { path: "/about", element: <About /> },
         { path: "/contact", element: <Contact /> },
+        { path: "/employee/:id", element: <Employee /> },
+        { path: "/laboratory/:id", element: <Laboratory /> },
+        { path: "/project/:id", element: <Project /> },
+
         {
           path: "/ressources",
           element: currentUser ? <Ressources /> : <Login/>,
+        },
+        {
+          path: "/projects",
+          element: currentUser ? <Projects /> : <Login/>,
         },
       ],
     },

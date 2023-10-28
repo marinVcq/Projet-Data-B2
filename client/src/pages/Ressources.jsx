@@ -5,6 +5,9 @@ import {Link, useNavigate} from 'react-router-dom'
 import { AuthContext } from "../context/authContext";
 import axios from 'axios';
 
+// Import assets
+import DetailIcon from "../assets/shared/search-icon-blue.png"
+
 const Ressources = () => {
 
   const [employees, setEmployees] = useState([]);
@@ -37,33 +40,30 @@ const Ressources = () => {
   const { currentUser, logout } = useContext(AuthContext);
   const navigate = useNavigate();
 
-  const columns = ['Name', 'Address', 'City', 'Phone number', 'Email', 'Website', 'Nb of emp.'];
-  const columnsEmployee = ['Name','Surname','Birthdate','Laboratory','Status','University', 'Email'];
-
   return (
-    <div className='ressources-container'>
-      <h2 className='page-title'>Ressources</h2>
+    <div className='ressources-page'>
 
-      <div className='table-container'>
-        <h2 className='table-title'>Labos</h2>
+      <h2 className='ressources-page-title'>Ressources</h2>
+
+      <div className='ressources-table-container'>
+        <h2 className='ressources-table-title'>Labos</h2>
         <div className='table'>
-
           <div className='table-header'>
-              {columns.map((column) => (
-                <p key={column} className='column-header'>{column}</p>
-              ))}
+                <p className='column-header' id="name-header">Name</p>
+                <p className='column-header' id="city-header">City</p>
+                <p className='column-header' id="phone-header">Phone Number</p>
+                <p className='column-header'id="email-header">Email</p>
+                <p className='column-header'id="headcount-header">Number of Emp.</p>
           </div>
-
           <div className='table-content'>
             {labos.map((labo) => (
                 <div key={labo.id} className='table-row'>
-                  <p>{labo.name}</p>
-                  <p>{labo.address}</p>
-                  <p>{labo.city}</p>
-                  <p>{labo.phoneNumber}</p>
-                  <p>{labo.email}</p>
-                  <p>{labo.website}</p>
-                  <p>{labo.headcount}</p>
+                  <p className={labo.name ? '' : 'nan-value'} id='name-cell'>{labo.name ? labo.name : "NaN"}</p>
+                  <p className={labo.city ? '' : 'nan-value'} id='city-cell'>{labo.city ? labo.city : "NaN"}</p>
+                  <p className={labo.phoneNumber ? '' : 'nan-value'} id='phone-cell'>{labo.phoneNumber ? labo.phoneNumber : "NaN"}</p>
+                  <p className={labo.email ? '' : 'nan-value'} id='email-cell'>{labo.email ? labo.email : "NaN"}</p>
+                  <p className={labo.headcount ? '' : 'nan-value'} id='headcount-cell'>{labo.headcount ? labo.headcount : "NaN"}</p>
+                  <Link className="link" to={`/laboratory/${labo.idlaboratoire}`}><img className='detail-icon' src={DetailIcon} alt="view detail"></img></Link>
                 </div>
               ))}
           </div>
@@ -71,34 +71,30 @@ const Ressources = () => {
       </div>
 
 
-      <div className='tab-container'>
-        <h2>Employees</h2>
-        <table>
-          <thead>
-            <tr>
-              {columnsEmployee.map((column) => (
-                <th key={column} className='column-header'>{column}</th>
-              ))}
-            </tr>
-          </thead>
-          <tbody>
+      <div className='ressources-table-container'>
+        <h2 className='ressources-table-title'>Employees</h2>
+        <div className='table'>
+          <div className='table-header'>
+                <p className='column-header' id="emp-name-header">Name</p>
+                <p className='column-header' id="emp-surname-header">Surname</p>
+                <p className='column-header' id="emp-phone-header">Phone Number</p>
+                <p className='column-header'id="emp-email-header">Email</p>
+                <p className='column-header'id="emp-lab-header">Laboratory</p>
+          </div>
+          <div className='table-content'>
             {employees.map((employee) => (
-              <tr key={employee.id} className='table-row'>
-                <td>{employee.name}</td>
-                <td>{employee.surname}</td>
-                <td>{employee.birthdate}</td>
-                {employee.has_laboratory? <td>{employee.has_laboratory}</td> : "NaN"}
-                <td>{employee.status}</td>
-                {employee.university ? <td>{employee.university}</td> : "NaN"}
-                <td>{employee.eamil}</td>
-
-              </tr>
-            ))}
-          </tbody>
-        </table>
+                <div key={employee.id} className='table-row'>
+                    <p className={employee.name ? '' : 'nan-value'} id='emp-name-cell'>{employee.name ? employee.name : "NaN"}</p>
+                    <p className={employee.surname ? '' : 'nan-value'} id='emp-surname-cell'>{employee.surname ? employee.surname : "NaN"}</p>
+                    <p className={employee.phoneNumber ? '' : 'nan-value'} id='emp-phone-cell'>{employee.phoneNumber ? employee.phoneNumber : "NaN"}</p>
+                    <p className={employee.email ? '' : 'nan-value'} id='emp-email-cell'>{employee.email ? employee.email : "NaN"}</p>
+                    <p className={employee.has_laboratory ? '' : 'nan-value'} id='emp-lab-cell'>{employee.has_laboratory ? employee.has_laboratory : "NaN"}</p>
+                    <Link className="link" to={`/employee/${employee.idemployee}`}><img className='detail-icon' src={DetailIcon} alt="view detail"></img></Link>
+                </div>
+              ))}
+          </div>
+        </div>
       </div>
-
-    
     </div>
   )
 }

@@ -34,57 +34,36 @@ const Login = () => {
     };
 
   return (
-    <div className='page-container'>
-        <h1 className='page-title'>Dashboard</h1>
+    <div className='login-page'>
+        <h1 className='login-page-title'>Employee Portal</h1>
 
-        <section className='login-section'>
+        <div className='login-page-container'>
 
-            <div className='intro-container'>
-                <h2>Information</h2>
-
-                <img className="intro-image" src={IntroImage} alt='introduction'></img>
-
-                <div className='intro-container-content'>
-                    <p>Welcome to the Fortunato Employee Portal.</p>
-                    <p>
-                        First time here ? Put a glance on <Link to='#'>The User Guide of the Fortunato Portal</Link>
-                        This portal is dedicated to enhancing collaboration and efficiency within our organization. It provides employees with secure access to
-                         essential resources, facilitating seamless communication and streamlining day-to-day operations.
-                        Login to access personalized information and contribute to the collective success of our pharmaceutical endeavors.
-                        For assistance, please contact the IT department.
-                    </p>                    
-                </div>
-            </div>
+            <h2 className='login-page-container-title'>Login</h2>
 
             <div className='login-form-container'>
-                <h2>Sign In</h2>
 
-                <div className='login-form'>
-                    <div className='input-container'>
-                        <p className='input-label'>Email</p>
-                        <input type="text" className='input-field' name="email" onChange={handleChange}></input>
-                    </div>
-
-                    <div className='input-container'>
-                        <p className='input-label'>Password</p>
-                        <input type="text" className='input-field' name="password" onChange={handleChange}></input>
-                    </div>
-
-                    <div className='checkbox-container'>
-                        <input type="checkbox"></input>
-                        <p>Remember me on this device</p>
-                    </div>
-
-                    <p className='register-link'>Not already member? <Link to="/register" className='link'>Sign Up</Link> for an account.</p>
-                    {err ? <p className='login-error'>This is an error</p> : "" }
-                    
-                    <div className='buttons-container'>
-                        <button className='login-btn' onClick={handleSubmit}>Login</button>
-                        <Link to="#" className='link'>Can't acces your account ?</Link>
-                    </div>
+                <div className='input-container'>
+                    <h3 className='input-label'>Email:</h3>
+                    <input className='input-field' placeholder='youremail@email.com' name="email" type='text' required onChange={handleChange}></input>
                 </div>
+
+                <div className='input-container'>
+                    <h3 className='input-label'>Password:</h3>
+                    <input className='input-field' placeholder='********' type='password' name="password" required onChange={handleChange}></input>
+                </div>
+
+                {err ? <p className='login-error'>{err}</p> : "" }
+
+
+                <button className='login-button' onClick={handleSubmit}>Login</button>
+                
+                <Link to="#" className='support-link'>Can't acces your account ?</Link>
+
             </div>
-        </section>
+        </div>
+
+
 
     </div>
   )

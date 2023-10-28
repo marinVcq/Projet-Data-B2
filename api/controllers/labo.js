@@ -14,6 +14,7 @@ export const getLabos = (req, res) => {
 
 // Fetch on laboratory
 export const getLabo = (req, res) => {
+  console.log("try to get one labo")
   const q = "SELECT  FROM laboratoire WHERE id = ? ";
   db.query(q, [req.params.id], (err, data) => {
     if (err) return res.status(500).json(err);

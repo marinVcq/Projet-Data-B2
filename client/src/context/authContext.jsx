@@ -8,44 +8,9 @@ export const AuthContextProvider = ({ children }) => {
     JSON.parse(localStorage.getItem("user")) || null
   );
 
-  // const login = async (inputs) => {
-  //   try {
-  //     // Log the request details before sending
-  //     console.log('Login Request:', {
-  //       method: 'POST',
-  //       url: '/auth/login',
-  //       data: inputs,
-  //       headers: {
-  //         'Content-Type': 'application/json', // Add other headers if needed
-  //       },
-  //     });
-  
-  //     // Send the request
-  //     const res = await axios.post('/auth/login', inputs);
-  
-  //     // Log the response details after receiving
-  //     console.log('Login Response:', {
-  //       status: res.status,
-  //       data: res.data,
-  //       headers: res.headers,
-  //     });
-  
-  //     // Set the current user based on the response
-  //     setCurrentUser(res.data);
-  
-  //   } catch (error) {
-  //     console.error('Login error:', error);
-  //   }
-  // };
-
   const login = async (inputs) => {
-    try {
-      const res = await axios.post("/api/auth/login", inputs);
-      setCurrentUser(res.data);
-      console.log(inputs);
-    } catch (error) {
-      console.error('Login error:', error);
-    }
+    const res = await axios.post("/api/auth/login", inputs);
+    setCurrentUser(res.data);
   };
 
   const logout = async () => {

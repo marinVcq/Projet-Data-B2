@@ -53,11 +53,6 @@ button {
   cursor: pointer;
 }
 
-.page-section-title {
-  font-size: 2.4rem;
-  margin: 3rem 0 3rem 0;
-}
-
 .visible {
   opacity: 1;
 }
@@ -717,444 +712,37 @@ h2 {
   border-radius: 0.4rem 0.4rem 0 0;
 }
 
-.page-container {
-  width: 100%;
-  height: 100%;
-  background-color: rgb(240, 240, 240);
-  padding: 9rem 1rem 3rem 1rem;
-  max-height: 100vh;
-}
-.page-container .page-title {
+.login-page {
   width: 100%;
   height: auto;
-  color: rgb(33, 33, 33);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 0;
+  background-color: rgb(240, 240, 240);
+  padding: 7rem 2rem 5rem 2rem;
+}
+.login-page .login-page-title {
+  width: 100%;
+  height: auto;
+  color: rgb(58, 56, 56);
   font-family: "Poppins";
-  font-weight: 500;
+  font-weight: 400;
   font-size: 2rem;
   font-style: normal;
-  padding: 1.5rem 0 1.5rem 0;
+  text-align: center;
+  margin: 2rem 0 2rem 0;
 }
-.page-container .login-section {
+.login-page .login-page-container {
   width: 100%;
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  align-items: flex-start;
-  gap: 2rem;
-}
-.page-container .login-section .intro-container, .page-container .login-section .login-form-container {
-  width: 100%;
-  height: 100%;
-  border-radius: 0.4rem;
-  display: flex;
-  flex-direction: row;
-  justify-content: flex-start;
-  align-items: center;
-  gap: 0;
-  flex-wrap: wrap;
-  background-color: hsl(0, 0%, 100%);
-  box-shadow: 2px 8px 14px 2px rgba(0, 0, 0, 0.22);
-}
-.page-container .login-section .intro-container h2, .page-container .login-section .login-form-container h2 {
-  display: flex;
-  flex-direction: row;
-  justify-content: flex-start;
-  align-items: center;
-  gap: 0;
-  color: hsl(0, 0%, 100%);
-  font-family: "Poppins";
-  font-weight: 400;
-  font-size: 1.6rem;
-  font-style: normal;
-  width: 100%;
-  height: 3.6rem;
-  padding-left: 1rem;
-  background-color: #5C7CFA;
-  border-radius: 0.4rem 0.4rem 0 0;
-}
-.page-container .login-section .intro-container .intro-image, .page-container .login-section .login-form-container .intro-image {
-  width: 20%;
   height: auto;
-  padding: 1%;
-}
-.page-container .login-section .intro-container .intro-container-content, .page-container .login-section .login-form-container .intro-container-content {
-  width: 80%;
-  height: auto;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  align-items: flex-start;
-  gap: 2rem;
-  padding: 1rem;
-}
-.page-container .login-section .intro-container .intro-container-content p, .page-container .login-section .login-form-container .intro-container-content p {
-  color: rgb(33, 33, 33);
-  font-family: "Poppins";
-  font-weight: 400;
-  font-size: 1.2rem;
-  font-style: normal;
-}
-.page-container .login-section .intro-container .login-form, .page-container .login-section .login-form-container .login-form {
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  align-items: flex-start;
-  gap: 1rem;
-  width: 100%;
-  height: 100%;
-  padding: 1.5rem;
-}
-.page-container .login-section .intro-container .login-form .input-container, .page-container .login-section .login-form-container .login-form .input-container {
-  padding-left: 0;
-  display: flex;
-  flex-direction: row;
-  justify-content: flex-end;
-  align-items: center;
-  gap: 1rem;
-  width: 100%;
-  height: 100%;
-  position: relative;
-}
-.page-container .login-section .intro-container .login-form .input-container .input-label, .page-container .login-section .login-form-container .login-form .input-container .input-label {
-  width: 50%;
-  height: 100%;
-  display: flex;
-  flex-direction: row;
-  justify-content: flex-end;
-  align-items: center;
-  gap: 0;
-  color: rgb(33, 33, 33);
-  font-family: "Poppins";
-  font-weight: 400;
-  font-size: 1.2rem;
-  font-style: normal;
-}
-.page-container .login-section .intro-container .login-form .input-container .input-field, .page-container .login-section .login-form-container .login-form .input-container .input-field {
-  background-color: transparent;
-  outline: none;
-  border: 0.1rem solid rgba(33, 33, 33, 0.5);
-  width: 50%;
-  height: 3.5rem;
-  border-radius: 0.4rem;
-  caret-color: black;
-  padding: 0.5rem;
-  color: rgb(33, 33, 33);
-  font-family: "Poppins";
-  font-weight: 400;
-  font-size: 1.4rem;
-  font-style: normal;
-  cursor: text;
-}
-.page-container .login-section .intro-container .login-form .checkbox-container, .page-container .login-section .login-form-container .login-form .checkbox-container {
-  padding-left: 0;
-  padding-top: 2rem;
-  display: flex;
-  flex-direction: row;
-  justify-content: flex-end;
-  align-items: center;
-  gap: 1rem;
-}
-.page-container .login-section .intro-container .login-form .checkbox-container input, .page-container .login-section .login-form-container .login-form .checkbox-container input {
-  cursor: pointer;
-}
-.page-container .login-section .intro-container .login-form .checkbox-container p, .page-container .login-section .login-form-container .login-form .checkbox-container p {
-  flex: 1;
-  color: rgb(33, 33, 33);
-  font-family: "Poppins";
-  font-weight: 400;
-  font-size: 1.3rem;
-  font-style: normal;
-}
-.page-container .login-section .intro-container .login-form .register-link, .page-container .login-section .login-form-container .login-form .register-link {
-  padding-left: 0;
-  padding-top: 2rem;
-  color: rgb(33, 33, 33);
-  font-family: "Poppins";
-  font-weight: 400;
-  font-size: 1.3rem;
-  font-style: normal;
-}
-.page-container .login-section .intro-container .login-form .register-link .link, .page-container .login-section .login-form-container .login-form .register-link .link {
-  color: #32329b;
-  font-family: "Poppins";
-  font-weight: 400;
-  font-size: 1.3rem;
-  font-style: normal;
-}
-.page-container .login-section .intro-container .login-form .buttons-container, .page-container .login-section .login-form-container .login-form .buttons-container {
-  padding-left: 0;
-  padding-top: 2rem;
-  display: flex;
-  flex-direction: row;
-  justify-content: flex-start;
-  align-items: center;
-  gap: 1.5rem;
-}
-.page-container .login-section .intro-container .login-form .buttons-container button, .page-container .login-section .login-form-container .login-form .buttons-container button {
-  background-color: #32329b;
-  color: white;
-  font-family: "Poppins";
-  font-weight: 400;
-  font-size: 1.4rem;
-  font-style: normal;
-  border: none;
-  padding: 0.8rem 2rem;
+  max-width: 35rem;
+  background-color: white;
   border-radius: 0.6rem;
+  box-shadow: 2px 10px 14px 2px rgba(0, 0, 0, 0.15);
 }
-.page-container .login-section .intro-container .login-form .buttons-container .link, .page-container .login-section .login-form-container .login-form .buttons-container .link {
-  color: #32329b;
-  font-family: "Poppins";
-  font-weight: 400;
-  font-size: 1.3rem;
-  font-style: normal;
-}
-
-@media only screen and (min-width: 1000px) {
-  .page-container {
-    width: 100%;
-    height: 100%;
-    background-color: rgb(240, 240, 240);
-    padding: 2rem 3rem 15rem 3rem;
-    max-height: 100vh;
-  }
-  .page-container .page-title {
-    width: 100%;
-    height: auto;
-    color: rgb(33, 33, 33);
-    font-family: "Poppins";
-    font-weight: 500;
-    font-size: 2rem;
-    font-style: normal;
-    padding: 0 0 2rem 0;
-  }
-  .page-container .login-section {
-    width: 100%;
-    height: auto;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: flex-start;
-    gap: 0;
-  }
-  .page-container .login-section .intro-container, .page-container .login-section .login-form-container {
-    border-radius: 0.4rem;
-    width: 48%;
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-start;
-    align-items: center;
-    gap: 0;
-    flex-wrap: wrap;
-    background-color: hsl(0, 0%, 100%);
-    box-shadow: 2px 8px 14px 2px rgba(0, 0, 0, 0.22);
-  }
-  .page-container .login-section .intro-container h2, .page-container .login-section .login-form-container h2 {
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-start;
-    align-items: center;
-    gap: 0;
-    color: hsl(0, 0%, 100%);
-    font-family: "Poppins";
-    font-weight: 400;
-    font-size: 1.6rem;
-    font-style: normal;
-    width: 100%;
-    height: 3.6rem;
-    padding-left: 1rem;
-    background-color: #32329b;
-    border-radius: 0.4rem 0.4rem 0 0;
-  }
-  .page-container .login-section .intro-container .intro-image, .page-container .login-section .login-form-container .intro-image {
-    width: 20%;
-    height: auto;
-    padding: 2rem;
-  }
-  .page-container .login-section .intro-container .intro-container-content, .page-container .login-section .login-form-container .intro-container-content {
-    width: 80%;
-    height: auto;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: flex-start;
-    gap: 2rem;
-    padding: 1rem;
-  }
-  .page-container .login-section .intro-container .intro-container-content p, .page-container .login-section .login-form-container .intro-container-content p {
-    color: rgb(33, 33, 33);
-    font-family: "Poppins";
-    font-weight: 400;
-    font-size: 1.4rem;
-    font-style: normal;
-  }
-  .page-container .login-section .intro-container .login-form, .page-container .login-section .login-form-container .login-form {
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: flex-start;
-    gap: 1rem;
-    width: 100%;
-    height: 100%;
-    padding: 1.5rem;
-  }
-  .page-container .login-section .intro-container .login-form .input-container, .page-container .login-section .login-form-container .login-form .input-container {
-    width: auto;
-    height: auto;
-    padding-left: 16rem;
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-end;
-    align-items: center;
-    gap: 1rem;
-    position: relative;
-  }
-  .page-container .login-section .intro-container .login-form .input-container .input-label, .page-container .login-section .login-form-container .login-form .input-container .input-label {
-    width: 15rem;
-    height: 100%;
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-end;
-    align-items: center;
-    gap: 0;
-    color: rgb(33, 33, 33);
-    font-family: "Poppins";
-    font-weight: 400;
-    font-size: 1.4rem;
-    font-style: normal;
-    position: absolute;
-    top: 50%;
-    left: 0;
-    transform: translateY(-50%);
-  }
-  .page-container .login-section .intro-container .login-form .input-container .input-field, .page-container .login-section .login-form-container .login-form .input-container .input-field {
-    background-color: transparent;
-    outline: none;
-    border: 0.1rem solid rgba(33, 33, 33, 0.5);
-    width: 19rem;
-    height: 3.5rem;
-    border-radius: 0.4rem;
-    caret-color: black;
-    padding: 0.5rem;
-    color: rgb(33, 33, 33);
-    font-family: "Poppins";
-    font-weight: 400;
-    font-size: 1.4rem;
-    font-style: normal;
-    cursor: text;
-  }
-  .page-container .login-section .intro-container .login-form .checkbox-container, .page-container .login-section .login-form-container .login-form .checkbox-container {
-    padding-left: 16rem;
-    padding-top: 0.8rem;
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-end;
-    align-items: center;
-    gap: 1rem;
-  }
-  .page-container .login-section .intro-container .login-form .checkbox-container input, .page-container .login-section .login-form-container .login-form .checkbox-container input {
-    cursor: pointer;
-  }
-  .page-container .login-section .intro-container .login-form .checkbox-container p, .page-container .login-section .login-form-container .login-form .checkbox-container p {
-    flex: 1;
-    color: rgb(33, 33, 33);
-    font-family: "Poppins";
-    font-weight: 400;
-    font-size: 1.3rem;
-    font-style: normal;
-  }
-  .page-container .login-section .intro-container .login-form .register-link, .page-container .login-section .login-form-container .login-form .register-link {
-    padding-left: 16rem;
-    padding-top: 0.8rem;
-    color: rgb(33, 33, 33);
-    font-family: "Poppins";
-    font-weight: 400;
-    font-size: 1.3rem;
-    font-style: normal;
-  }
-  .page-container .login-section .intro-container .login-form .register-link .link, .page-container .login-section .login-form-container .login-form .register-link .link {
-    color: #32329b;
-    font-family: "Poppins";
-    font-weight: 400;
-    font-size: 1.3rem;
-    font-style: normal;
-  }
-  .page-container .login-section .intro-container .login-form .login-error, .page-container .login-section .login-form-container .login-form .login-error {
-    color: red;
-    font-family: "Poppins";
-    font-weight: 400;
-    font-size: 1.2rem;
-    font-style: normal;
-    padding-left: 16rem;
-  }
-  .page-container .login-section .intro-container .login-form .buttons-container, .page-container .login-section .login-form-container .login-form .buttons-container {
-    padding-left: 16rem;
-    padding-top: 0.8rem;
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-start;
-    align-items: center;
-    gap: 1.5rem;
-  }
-  .page-container .login-section .intro-container .login-form .buttons-container button, .page-container .login-section .login-form-container .login-form .buttons-container button {
-    background-color: #32329b;
-    color: white;
-    font-family: "Poppins";
-    font-weight: 400;
-    font-size: 1.4rem;
-    font-style: normal;
-    border: none;
-    padding: 0.8rem 2rem;
-    border-radius: 0.6rem;
-  }
-  .page-container .login-section .intro-container .login-form .buttons-container .link, .page-container .login-section .login-form-container .login-form .buttons-container .link {
-    color: #32329b;
-    font-family: "Poppins";
-    font-weight: 400;
-    font-size: 1.3rem;
-    font-style: normal;
-  }
-}
-.page-container {
-  width: 100%;
-  height: 100%;
-  background-color: rgb(240, 240, 240);
-  padding: 9rem 1rem 3rem 1rem;
-  min-height: 100vh;
-}
-.page-container .page-title {
-  width: 100%;
-  height: auto;
-  color: rgb(33, 33, 33);
-  font-family: "Poppins";
-  font-weight: 500;
-  font-size: 2rem;
-  font-style: normal;
-  padding: 1.5rem 0 1.5rem 0;
-}
-.page-container .register-section {
-  width: 100%;
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  align-items: flex-start;
-  gap: 2rem;
-}
-.page-container .register-section .intro-container, .page-container .register-section .register-form-container {
-  width: 100%;
-  height: 100%;
-  border-radius: 0.4rem;
-  display: flex;
-  flex-direction: row;
-  justify-content: flex-start;
-  align-items: center;
-  gap: 0;
-  flex-wrap: wrap;
-  background-color: hsl(0, 0%, 100%);
-  box-shadow: 2px 8px 14px 2px rgba(0, 0, 0, 0.22);
-}
-.page-container .register-section .intro-container h2, .page-container .register-section .register-form-container h2 {
+.login-page .login-page-container .login-page-container-title {
   display: flex;
   flex-direction: row;
   justify-content: flex-start;
@@ -1169,240 +757,81 @@ h2 {
   height: 3.6rem;
   padding-left: 1rem;
   background-color: #32329b;
-  border-radius: 0.4rem 0.4rem 0 0;
+  border-radius: 0.6rem 0.6rem 0 0;
 }
-.page-container .register-section .intro-container .intro-container-content, .page-container .register-section .register-form-container .intro-container-content {
-  width: 80%;
-  height: auto;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  align-items: flex-start;
-  gap: 2rem;
-  padding: 1rem;
-}
-.page-container .register-section .intro-container .intro-container-content p, .page-container .register-section .register-form-container .intro-container-content p {
-  color: rgb(33, 33, 33);
-  font-family: "Poppins";
-  font-weight: 400;
-  font-size: 1.2rem;
-  font-style: normal;
-}
-.page-container .register-section .intro-container .register-form, .page-container .register-section .register-form-container .register-form {
+.login-page .login-page-container .login-form-container {
+  width: 100%;
+  height: 100%;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
   align-items: flex-start;
   gap: 1rem;
+  padding: 4rem;
+}
+.login-page .login-page-container .login-form-container .input-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 0.5rem;
   width: 100%;
   height: 100%;
-  padding: 1.5rem;
 }
-.page-container .register-section .intro-container .register-form .input-container, .page-container .register-section .register-form-container .register-form .input-container {
-  padding-left: 0;
-  display: flex;
-  flex-direction: row;
-  justify-content: flex-end;
-  align-items: center;
-  gap: 1rem;
-  width: 100%;
-  height: 100%;
-  position: relative;
-}
-.page-container .register-section .intro-container .register-form .input-container .input-label, .page-container .register-section .register-form-container .register-form .input-container .input-label {
-  width: 50%;
-  height: 100%;
-  display: flex;
-  flex-direction: row;
-  justify-content: flex-end;
-  align-items: center;
-  gap: 0;
-  color: rgb(33, 33, 33);
+.login-page .login-page-container .login-form-container .input-container .input-label {
+  color: rgb(58, 56, 56);
   font-family: "Poppins";
   font-weight: 400;
-  font-size: 1.2rem;
+  font-size: 1.6rem;
   font-style: normal;
 }
-.page-container .register-section .intro-container .register-form .input-container .input-field, .page-container .register-section .register-form-container .register-form .input-container .input-field {
+.login-page .login-page-container .login-form-container .input-container .input-field {
+  width: 100%;
+  height: 100%;
   background-color: transparent;
-  outline: none;
-  border: 0.1rem solid rgba(33, 33, 33, 0.5);
-  width: 50%;
-  height: 3.5rem;
-  border-radius: 0.4rem;
+  border: 0.1rem solid rgba(58, 56, 56, 0.8);
   caret-color: black;
-  padding: 0.5rem;
-  color: rgb(33, 33, 33);
-  font-family: "Poppins";
-  font-weight: 400;
-  font-size: 1.4rem;
-  font-style: normal;
+  border-radius: 0.4rem;
+  padding: 0.8rem;
   cursor: text;
 }
-.page-container .register-section .intro-container .register-form .buttons-container, .page-container .register-section .register-form-container .register-form .buttons-container {
-  padding-left: 0;
-  padding-top: 2rem;
-  display: flex;
-  flex-direction: row;
-  justify-content: flex-start;
-  align-items: center;
-  gap: 1.5rem;
-}
-.page-container .register-section .intro-container .register-form .buttons-container button, .page-container .register-section .register-form-container .register-form .buttons-container button {
-  background-color: #32329b;
-  color: white;
+.login-page .login-page-container .login-form-container .login-error {
+  color: red;
   font-family: "Poppins";
   font-weight: 400;
   font-size: 1.4rem;
   font-style: normal;
-  border: none;
-  padding: 0.8rem 2rem;
-  border-radius: 0.6rem;
 }
-.page-container .register-section .intro-container .register-form .buttons-container .link, .page-container .register-section .register-form-container .register-form .buttons-container .link {
+.login-page .login-page-container .login-form-container .login-button {
+  color: hsl(0, 0%, 100%);
+  font-family: "Poppins";
+  font-weight: 400;
+  font-size: 1.4rem;
+  font-style: normal;
+  width: 100%;
+  height: 100%;
+  background-color: #32329b;
+  border: none;
+  border-radius: 0.4rem;
+  padding: 0.8rem;
+}
+.login-page .login-page-container .login-form-container .support-link {
+  width: 100%;
+  height: 100%;
   color: #32329b;
   font-family: "Poppins";
   font-weight: 400;
-  font-size: 1.3rem;
+  font-size: 1.4rem;
   font-style: normal;
+  text-align: center;
 }
 
 @media only screen and (min-width: 1000px) {
-  .page-container {
-    width: 100%;
-    height: 100%;
-    background-color: rgb(240, 240, 240);
-    padding: 2rem 3rem 15rem 3rem;
-    max-height: 100vh;
+  .login-page {
+    padding-top: 9rem;
   }
-  .page-container .page-title {
-    width: 100%;
-    height: auto;
-    color: rgb(33, 33, 33);
-    font-family: "Poppins";
-    font-weight: 500;
-    font-size: 2rem;
-    font-style: normal;
-    padding: 0 0 2rem 0;
-  }
-  .page-container .register-section {
-    width: 100%;
-    height: auto;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: flex-start;
-    gap: 0;
-  }
-  .page-container .register-section .intro-container, .page-container .register-section .register-form-container {
-    border-radius: 0.4rem;
-    width: 48%;
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-start;
-    align-items: center;
-    gap: 0;
-    flex-wrap: wrap;
-    background-color: hsl(0, 0%, 100%);
-    box-shadow: 2px 8px 14px 2px rgba(0, 0, 0, 0.22);
-  }
-  .page-container .register-section .intro-container h2, .page-container .register-section .register-form-container h2 {
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-start;
-    align-items: center;
-    gap: 0;
-    color: hsl(0, 0%, 100%);
-    font-family: "Poppins";
-    font-weight: 400;
-    font-size: 1.6rem;
-    font-style: normal;
-    width: 100%;
-    height: 3.6rem;
-    padding-left: 1rem;
-    background-color: #32329b;
-    border-radius: 0.4rem 0.4rem 0 0;
-  }
-  .page-container .register-section .intro-container .intro-container-content, .page-container .register-section .register-form-container .intro-container-content {
-    width: 80%;
-    height: auto;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: flex-start;
-    gap: 2rem;
-    padding: 1rem;
-  }
-  .page-container .register-section .intro-container .intro-container-content p, .page-container .register-section .register-form-container .intro-container-content p {
-    color: rgb(33, 33, 33);
-    font-family: "Poppins";
-    font-weight: 400;
-    font-size: 1.4rem;
-    font-style: normal;
-  }
-  .page-container .register-section .intro-container .register-form, .page-container .register-section .register-form-container .register-form {
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-start;
-    align-items: flex-start;
-    gap: 1rem;
-    width: 100%;
-    height: 100%;
-    padding: 1.5rem;
-  }
-  .page-container .register-section .intro-container .register-form .left-container, .page-container .register-section .intro-container .register-form .right-container, .page-container .register-section .register-form-container .register-form .left-container, .page-container .register-section .register-form-container .register-form .right-container {
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: flex-end;
-    gap: 1rem;
-  }
-  .page-container .register-section .intro-container .register-form .left-container .input-container, .page-container .register-section .intro-container .register-form .right-container .input-container, .page-container .register-section .register-form-container .register-form .left-container .input-container, .page-container .register-section .register-form-container .register-form .right-container .input-container {
-    width: auto;
-    height: auto;
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-end;
-    align-items: center;
-    gap: 1rem;
-  }
-  .page-container .register-section .intro-container .register-form .left-container .input-container .input-label, .page-container .register-section .intro-container .register-form .right-container .input-container .input-label, .page-container .register-section .register-form-container .register-form .left-container .input-container .input-label, .page-container .register-section .register-form-container .register-form .right-container .input-container .input-label {
-    width: auto;
-    height: 100%;
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-end;
-    align-items: center;
-    gap: 0;
-    color: rgb(33, 33, 33);
-    font-family: "Poppins";
-    font-weight: 400;
-    font-size: 1.4rem;
-    font-style: normal;
-  }
-  .page-container .register-section .intro-container .register-form .left-container .input-container .input-field, .page-container .register-section .intro-container .register-form .right-container .input-container .input-field, .page-container .register-section .register-form-container .register-form .left-container .input-container .input-field, .page-container .register-section .register-form-container .register-form .right-container .input-container .input-field {
-    background-color: transparent;
-    outline: none;
-    border: 0.1rem solid rgba(33, 33, 33, 0.5);
-    width: 19rem;
-    height: 3.5rem;
-    border-radius: 0.4rem;
-    caret-color: black;
-    padding: 0.5rem;
-    color: rgb(33, 33, 33);
-    font-family: "Poppins";
-    font-weight: 400;
-    font-size: 1.4rem;
-    font-style: normal;
-    cursor: text;
-  }
-  .page-container .register-section .intro-container .register-form .left-container .login-error, .page-container .register-section .intro-container .register-form .right-container .login-error, .page-container .register-section .register-form-container .register-form .left-container .login-error, .page-container .register-section .register-form-container .register-form .right-container .login-error {
-    color: red;
-    font-family: "Poppins";
-    font-weight: 400;
-    font-size: 1.2rem;
-    font-style: normal;
-    padding-left: 16rem;
+  .login-page .login-page-title {
+    text-align: start;
   }
 }
 .about-container {
@@ -1469,35 +898,37 @@ h2 {
   height: 100%;
 }
 
-.ressources-container {
+.ressources-page {
   width: 100%;
-  height: 100%;
+  height: auto;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
-  gap: 2rem;
+  gap: 0;
   background-color: rgb(240, 240, 240);
-  padding: 1rem 1rem 3rem 1rem;
-  min-height: 100vh;
+  padding: 9rem 2rem 5rem 2rem;
 }
-.ressources-container .page-title {
+.ressources-page .ressources-page-title {
   width: 100%;
   height: auto;
-  color: rgb(33, 33, 33);
+  color: rgb(58, 56, 56);
   font-family: "Poppins";
-  font-weight: 500;
+  font-weight: 400;
   font-size: 2rem;
   font-style: normal;
-  padding: 1.5rem 0 1.5rem 0;
+  text-align: start;
+  margin: 2rem 0 2rem 0;
 }
-.ressources-container .table-container {
+.ressources-page .ressources-table-container {
   width: 100%;
-  height: 100%;
+  height: auto;
   background-color: white;
-  border-radius: 0.4rem;
+  border-radius: 0.6rem;
+  box-shadow: 2px 10px 14px 2px rgba(0, 0, 0, 0.15);
+  margin-bottom: 4rem;
 }
-.ressources-container .table-container .table-title {
+.ressources-page .ressources-table-container .ressources-table-title {
   display: flex;
   flex-direction: row;
   justify-content: flex-start;
@@ -1512,19 +943,66 @@ h2 {
   height: 3.6rem;
   padding-left: 1rem;
   background-color: #32329b;
-  border-radius: 0.4rem 0.4rem 0 0;
+  border-radius: 0.6rem 0.6rem 0 0;
 }
-.ressources-container .table-container .table {
-  padding: 1rem;
+.ressources-page .ressources-table-container .table {
   width: 100%;
   height: 100%;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  align-items: flex-start;
-  gap: 0;
+  padding: 2rem;
 }
-.ressources-container .table-container .table .table-header {
+.ressources-page .ressources-table-container .table .table-header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0;
+  padding-bottom: 1rem;
+  margin-bottom: 1rem;
+}
+.ressources-page .ressources-table-container .table .table-header .column-header {
+  width: 100%;
+  height: 100%;
+  color: rgb(58, 56, 56);
+  font-family: "Poppins";
+  font-weight: 600;
+  font-size: 1.6rem;
+  font-style: normal;
+}
+.ressources-page .ressources-table-container .table .table-header .column-header#name-header {
+  width: 30%;
+}
+.ressources-page .ressources-table-container .table .table-header .column-header#city-header {
+  width: 10%;
+}
+.ressources-page .ressources-table-container .table .table-header .column-header#phone-header {
+  width: 20%;
+}
+.ressources-page .ressources-table-container .table .table-header .column-header#email-header {
+  width: 25%;
+}
+.ressources-page .ressources-table-container .table .table-header .column-header#headcount-header {
+  width: 15%;
+}
+.ressources-page .ressources-table-container .table .table-header .column-header#emp-name-header {
+  width: 15%;
+}
+.ressources-page .ressources-table-container .table .table-header .column-header#emp-surname-header {
+  width: 15%;
+}
+.ressources-page .ressources-table-container .table .table-header .column-header#emp-phone-header {
+  width: 15%;
+}
+.ressources-page .ressources-table-container .table .table-header .column-header#emp-email-header {
+  width: 25%;
+}
+.ressources-page .ressources-table-container .table .table-header .column-header#emp-lab-header {
+  width: 30%;
+}
+.ressources-page .ressources-table-container .table .table-content {
+  max-height: 60rem;
+  overflow-y: scroll;
+}
+.ressources-page .ressources-table-container .table .table-content .table-row {
   width: 100%;
   height: 100%;
   display: flex;
@@ -1532,79 +1010,91 @@ h2 {
   justify-content: space-between;
   align-items: center;
   gap: 0;
+  position: relative;
 }
-.ressources-container .table-container .table .table-header p {
-  color: rgb(33, 33, 33);
+.ressources-page .ressources-table-container .table .table-content .table-row p {
+  width: 100%;
+  height: 100%;
+  color: rgb(58, 56, 56);
   font-family: "Poppins";
   font-weight: 400;
-  font-size: 1.6rem;
+  font-size: 1.5rem;
   font-style: normal;
+  padding: 0.8rem 0 0.8rem 0;
+  border-bottom: 0.1rem solid rgba(33, 33, 33, 0.2);
 }
-.ressources-container .table-container .table .table-content {
-  width: 100%;
-  height: 100%;
+.ressources-page .ressources-table-container .table .table-content .table-row p#name-cell {
+  width: 30%;
 }
-.ressources-container .table-container .table .table-content .table-row {
+.ressources-page .ressources-table-container .table .table-content .table-row p#city-cell {
+  width: 10%;
+}
+.ressources-page .ressources-table-container .table .table-content .table-row p#phone-cell {
+  width: 20%;
+}
+.ressources-page .ressources-table-container .table .table-content .table-row p#email-cell {
+  width: 25%;
+}
+.ressources-page .ressources-table-container .table .table-content .table-row p#headcount-cell {
+  width: 15%;
+}
+.ressources-page .ressources-table-container .table .table-content .table-row p#emp-name-cell {
+  width: 15%;
+}
+.ressources-page .ressources-table-container .table .table-content .table-row p#emp-surname-cell {
+  width: 15%;
+}
+.ressources-page .ressources-table-container .table .table-content .table-row p#emp-phone-cell {
+  width: 15%;
+}
+.ressources-page .ressources-table-container .table .table-content .table-row p#emp-email-cell {
+  width: 25%;
+}
+.ressources-page .ressources-table-container .table .table-content .table-row p#emp-lab-cell {
+  width: 30%;
+}
+.ressources-page .ressources-table-container .table .table-content .table-row p.nan-value {
+  color: red;
+}
+.ressources-page .ressources-table-container .table .table-content .table-row .detail-icon {
+  position: absolute;
+  top: 50%;
+  right: 1rem;
+  transform: translateY(-50%);
+  width: 3rem;
+  height: 3rem;
+  cursor: pointer;
+}
+
+.laboratory-page {
   width: 100%;
-  height: 100%;
+  height: auto;
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   justify-content: flex-start;
   align-items: center;
   gap: 0;
+  background-color: rgb(240, 240, 240);
+  padding: 9rem 2rem 5rem 2rem;
 }
-.ressources-container .table-container .table .table-content .table-row p {
-  color: rgb(33, 33, 33);
+.laboratory-page .laboratory-page-title {
+  width: 100%;
+  height: auto;
+  color: rgb(58, 56, 56);
   font-family: "Poppins";
   font-weight: 400;
-  font-size: 1.4rem;
-  font-style: normal;
-}
-.ressources-container .tab-container {
-  width: 100%;
-  height: 100%;
-  background-color: white;
-  box-shadow: 2px 8px 14px 2px rgba(0, 0, 0, 0.22);
-}
-.ressources-container .tab-container h2 {
-  display: flex;
-  flex-direction: row;
-  justify-content: flex-start;
-  align-items: center;
-  gap: 0;
-  color: hsl(0, 0%, 100%);
-  font-family: "Poppins";
-  font-weight: 400;
-  font-size: 1.6rem;
-  font-style: normal;
-  width: 100%;
-  height: 3.6rem;
-  padding-left: 1rem;
-  background-color: #32329b;
-  border-radius: 0.4rem 0.4rem 0 0;
-}
-.ressources-container .tab-container table {
-  padding: 1rem;
-  width: 100%;
-  height: 100%;
-  border-collapse: separate;
-  border-spacing: 1.5rem;
-}
-.ressources-container .tab-container table thead .column-header {
-  color: rgb(33, 33, 33);
-  font-family: "Poppins";
-  font-weight: 400;
-  font-size: 1.6rem;
+  font-size: 2rem;
   font-style: normal;
   text-align: start;
+  margin: 2rem 0 2rem 0;
 }
-.ressources-container .tab-container table tbody .table-row {
-  color: rgb(33, 33, 33);
-  font-family: "Poppins";
-  font-weight: 400;
-  font-size: 1.4rem;
-  font-style: normal;
+.laboratory-page .laboratory-detail-container {
+  width: 100%;
+  height: auto;
+  background-color: white;
+  box-shadow: 2px 10px 14px 2px rgba(0, 0, 0, 0.15);
 }
+
 .navbar-container-mobile {
   width: 100%;
   height: 7rem;
@@ -1716,12 +1206,18 @@ h2 {
   transition: all 0.2s linear;
   opacity: 0;
   z-index: 2;
+  display: none;
 }
 .navbar-bg.expand {
   opacity: 1;
 }
 
 .navbar-container-desktop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
   width: 100%;
   height: 9rem;
   display: flex;
