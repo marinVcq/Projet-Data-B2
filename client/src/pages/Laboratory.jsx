@@ -22,6 +22,7 @@ const Laboratory = () => {
     const fetchData = async () => {
       try {
         const res = await axios.get(`/api/labos/${laboId}`);
+        console.log(res.data)
         setLabo(res.data);
       } catch (err) {
         console.log(err);
