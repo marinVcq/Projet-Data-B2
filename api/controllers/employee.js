@@ -14,7 +14,7 @@ export const getEmployees = (req, res) => {
 
 // Fetch one employee
 export const getEmployee = (req, res) => {
-  const q = "SELECT  FROM employee WHERE idemployee = ? ";
+  const q = "SELECT * FROM employee WHERE idemployee = ? ";
   db.query(q, [req.params.id], (err, data) => {
     if (err) return res.status(500).json(err);
     return res.status(200).json(data[0]);
