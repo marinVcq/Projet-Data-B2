@@ -44,6 +44,7 @@ const NavbarMobile = () => {
             <Link to='/' className='navbar-link'>Home</Link>
             <Link to='/about' className='navbar-link'>About Us</Link>
             <Link to='/contact' className='navbar-link'>Contact</Link>
+            { currentUser ? <Link to='/dashboard' className='navbar-link'>Dashboard</Link> : ""}
             { currentUser ? <Link to='/ressources' className='navbar-link'>Ressources</Link> : ""}
             { currentUser ? <Link to='/projects' className='navbar-link'>Projects</Link> : ""}
             {currentUser ? <span onClick={logout} className='navbar-link logout-btn'>Logout</span> :  <Link to='/login' className='navbar-link login-btn'>Connexion</Link>}
@@ -76,8 +77,7 @@ const NavbarDesktop = () => {
         <Link to='/' className='navbar-link'>Home</Link>
         <Link to='/about' className='navbar-link'>About Us</Link>
         <Link to='/contact' className='navbar-link'>Contact</Link>
-        { currentUser ? <Link to='/ressources' className='navbar-link'>Ressources</Link> : ""}
-        { currentUser ? <Link to='/projects' className='navbar-link'>Projects</Link> : ""}
+        { currentUser ? <Link to='/dashboard' className='navbar-link'>Dashboard</Link> : ""}
         {currentUser ? <span onClick={logout} className='navbar-link logout-btn'>Logout</span> :  <Link to='/login' className='navbar-link login-btn'>Connexion</Link>}
       </div>
   </div>

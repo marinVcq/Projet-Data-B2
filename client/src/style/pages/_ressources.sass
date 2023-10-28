@@ -7,9 +7,19 @@
     // TITLE OF THE PAGE
     .ressources-page-title
         @include width-height(100%,auto)
-        @include set-font($lightBlack, "Poppins", 2rem, 400, normal)
+        @include set-font($lightBlack, "Poppins", 2.5rem ,400, normal)
+        padding: 2rem 0 0 0
         text-align: start
-        margin: 2rem 0 2rem 0
+
+    // DASHBOARD NAV
+    .dashboard-navigation
+        @include width-height(100%,100%)
+        @include flexbox(row, flex-start, center, 3rem)
+        transition: all 0.2s linear
+        .navbar-link
+            @include set-font($lightBlack, "Poppins", 1.8rem, 400, normal)
+            &:hover
+                font-weight: 600
 
     // TABLE CONTAINER 
     .ressources-table-container

@@ -34,13 +34,74 @@ const Laboratory = () => {
 
   return (
     <div className='laboratory-page'>
-      <h1 className='laboratory-page-title'>Laboratory detail</h1>
+      <h1 className='laboratory-page-title'>Laboratory details</h1>
 
-      <div className='laboratory-detail-container'>
+      <div className='laboratory-details-container'>
         <h2 className='laboratory-name'>{labo.name ? labo.name : "Empty"}</h2>
 
-        <div className='detail-container'>
+
+        <div className='details'>
+          <div className='subcontainer'>
+            <div className='detail'>
+              <p className='detail-label'>Name:</p>
+              <p className={`detail-value ${labo.name ? '' : 'nan-value'}`}>
+                {labo.name || "NaN"}
+              </p>
+            </div>
+
+            <div className='detail'>
+              <p className='detail-label'>Speciality:</p>
+              <p className={`detail-value ${labo.speciality ? '' : 'nan-value'}`}>
+                {labo.speciality || "NaN"}
+              </p>
+            </div>
+
+            <div className='detail'>
+              <p className='detail-label'>Address:</p>
+              <p className={`detail-value ${labo.address ? '' : 'nan-value'}`}>
+                {labo.address || "NaN"}
+              </p>
+            </div>
+
+            <div className='detail'>
+              <p className='detail-label'>City:</p>
+              <p className={`detail-value ${labo.city ? '' : 'nan-value'}`}>
+                {labo.city || "NaN"}
+              </p>
+            </div>
+          </div>
+
+          <div className='subcontainer'>
+            <div className='detail'>
+              <p className='detail-label'>Phone number:</p>
+              <p className={`detail-value ${labo.phoneNumber ? '' : 'nan-value'}`}>
+                {labo.phoneNumber || "NaN"}
+              </p>
+            </div>
+
+            <div className='detail'>
+              <p className='detail-label'>Email:</p>
+              <p className={`detail-value ${labo.email ? '' : 'nan-value'}`}>
+                {labo.email || "NaN"}
+              </p>
+            </div>
+
+            <div className='detail'>
+              <p className='detail-label'>Website:</p>
+              <p className={`detail-value ${labo.website ? '' : 'nan-value'}`}>
+                {labo.website || "NaN"}
+              </p>
+            </div>
+
+            <div className='detail'>
+              <p className='detail-label'>Number of Emp:</p>
+              <p className={`detail-value ${labo.headcount ? '' : 'nan-value'}`}>
+                {labo.headcount || "NaN"}
+              </p>
+            </div>
+          </div>
         </div>
+
       </div>
     </div>
   )

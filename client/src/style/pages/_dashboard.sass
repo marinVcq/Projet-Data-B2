@@ -1,13 +1,25 @@
 .dashboard-container
     @include width-height(100%,100%)
-    @include flexbox(column, flex-start, flex-start,2rem)
+    @include flexbox(column, flex-start, flex-start)
     background-color: rgb(240,240,240)
-    padding: 1rem 1rem 3rem 1rem
+    padding: 9rem 2rem 3rem 2rem
+
+    // DASHBOARD NAV
+    .dashboard-navigation
+        @include width-height(100%,100%)
+        @include flexbox(row, flex-start, center, 3rem)
+        transition: all 0.2s linear
+        padding: 2rem 0 2rem 0
+        .navbar-link
+            @include set-font($lightBlack, "Poppins", 1.8rem, 400, normal)
+            &:hover
+                font-weight: 600
+
     
     // PAGE TITLE
     .page-title
-        @include set-font($lightBlack, "Poppins", 1.8rem , 400, normal)
-        padding: 1rem 0 0 0
+        @include set-font($lightBlack, "Poppins", 2.5rem ,400, normal)
+        padding: 2rem 0 0 0
 
     // PANELS MAIN CONTAINER 
     .panels-container

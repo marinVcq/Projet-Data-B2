@@ -45,6 +45,13 @@ const Ressources = () => {
 
       <h2 className='ressources-page-title'>Ressources</h2>
 
+      <section className='dashboard-navigation'>
+            <Link to='/ressources' className='navbar-link'>Global Ressources</Link>
+            <Link to='/projects' className='navbar-link'>Projects</Link>
+            <Link to='/inventory' className='navbar-link'>Inventory</Link>
+            <Link to='/reservation' className='navbar-link'>Reservation</Link>
+       </section>
+
       <div className='ressources-table-container'>
         <h2 className='ressources-table-title'>Labos</h2>
         <div className='table'>
