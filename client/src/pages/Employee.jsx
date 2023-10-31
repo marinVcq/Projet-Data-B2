@@ -36,6 +36,15 @@ const Employee = () => {
     <div className='employee-page'>
       <h1 className='employee-page-title'>Employee details</h1>
 
+
+      <section className='dashboard-navigation'>
+        <Link to='/dashboard' className='navbar-link'>Database request</Link>
+        <Link to='/ressources' className='navbar-link'>Global Ressources</Link>
+        <Link to='/projects' className='navbar-link'>Projects</Link>
+        <Link to='/inventory' className='navbar-link'>Inventory</Link>
+        <Link to='/reservation' className='navbar-link'>Reservation</Link>
+      </section>
+
       <div className='employee-details-container'>
         <h2 className='employee-name'>{employee.name && employee.surname ? employee.name + " " + employee.surname : "Empty"}</h2>
         

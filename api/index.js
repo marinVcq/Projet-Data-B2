@@ -5,6 +5,9 @@ import cookieParser from "cookie-parser";
 import laboRoutes from "./routes/labos.js";
 import authRoutes from "./routes/auth.js";
 import employeeRoutes from "./routes/employees.js";
+import projectRoutes from "./routes/projects.js";
+import experimentRoutes from "./routes/experiments.js";
+
 
 import dotenv from 'dotenv';
 dotenv.config();
@@ -16,6 +19,8 @@ app.use(cookieParser());
 app.use("/api/labos", laboRoutes);
 app.use("/api/auth", authRoutes);
 app.use("/api/employees", employeeRoutes);
+app.use("/api/projects", projectRoutes);
+app.use("/api/experiments", experimentRoutes);
 
 const server = app.listen(process.env.DB_PORT, () => {
     console.log("Server connected");

@@ -4,7 +4,7 @@ module.exports = function (app) {
   app.use(
     '/api',
     createProxyMiddleware({
-      target: 'https://fortunato-api.onrender.com',
+      target: 'http://localhost:3306',
       changeOrigin: true,
     })
   );

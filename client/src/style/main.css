@@ -65,6 +65,28 @@ h2 {
   border-radius: 50%;
 }
 
+.dashboard-navigation {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 3rem;
+  transition: all 0.2s linear;
+  padding: 2rem 0 2rem 0;
+}
+.dashboard-navigation .navbar-link {
+  color: rgb(58, 56, 56);
+  font-family: "Poppins";
+  font-weight: 400;
+  font-size: 1.8rem;
+  font-style: normal;
+}
+.dashboard-navigation .navbar-link:hover {
+  font-weight: 600;
+}
+
 .home-container {
   width: 100%;
   height: 100%;
@@ -543,63 +565,6 @@ h2 {
   width: 100%;
   height: 100%;
 }
-.dashboard-container .panels-container .user-panel {
-  width: 100%;
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  align-items: flex-start;
-  gap: 0;
-  box-shadow: 2px 8px 14px 2px rgba(0, 0, 0, 0.22);
-  background-color: white;
-  width: 30%;
-  border-radius: 0.4rem;
-}
-.dashboard-container .panels-container .user-panel h2 {
-  display: flex;
-  flex-direction: row;
-  justify-content: flex-start;
-  align-items: center;
-  gap: 0;
-  color: hsl(0, 0%, 100%);
-  font-family: "Poppins";
-  font-weight: 400;
-  font-size: 1.6rem;
-  font-style: normal;
-  width: 100%;
-  height: 3.6rem;
-  padding-left: 1rem;
-  background-color: #32329b;
-  border-radius: 0.4rem 0.4rem 0 0;
-}
-.dashboard-container .panels-container .user-panel .information-container {
-  padding: 1rem;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  align-items: space-betwwen;
-  gap: 0.4rem;
-  width: 100%;
-  height: 100%;
-}
-.dashboard-container .panels-container .user-panel .information-container p {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
-  gap: 0;
-  width: 100%;
-  height: 100%;
-  color: rgb(33, 33, 33);
-  font-family: "Poppins";
-  font-weight: 400;
-  font-size: 1.6rem;
-  font-style: normal;
-}
-.dashboard-container .panels-container .user-panel .information-container p span {
-  font-weight: 600;
-}
 .dashboard-container .panels-container .search-container {
   width: 100%;
   height: 100%;
@@ -711,11 +676,15 @@ h2 {
   font-size: 1.3rem;
   font-style: normal;
 }
-.dashboard-container .result-container {
+.dashboard-container .ressources-table-container {
   width: 100%;
-  height: 100%;
+  height: auto;
+  background-color: white;
+  border-radius: 0.6rem;
+  box-shadow: 2px 10px 14px 2px rgba(0, 0, 0, 0.15);
+  margin-bottom: 4rem;
 }
-.dashboard-container .result-container h2 {
+.dashboard-container .ressources-table-container .ressources-table-title {
   display: flex;
   flex-direction: row;
   justify-content: flex-start;
@@ -730,7 +699,127 @@ h2 {
   height: 3.6rem;
   padding-left: 1rem;
   background-color: #32329b;
-  border-radius: 0.4rem 0.4rem 0 0;
+  border-radius: 0.6rem 0.6rem 0 0;
+}
+.dashboard-container .ressources-table-container .table {
+  width: 100%;
+  height: 100%;
+  padding: 2rem;
+}
+.dashboard-container .ressources-table-container .table .table-header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0;
+  padding-bottom: 1rem;
+  margin-bottom: 1rem;
+}
+.dashboard-container .ressources-table-container .table .table-header .column-header {
+  width: 100%;
+  height: 100%;
+  color: rgb(58, 56, 56);
+  font-family: "Poppins";
+  font-weight: 600;
+  font-size: 1.6rem;
+  font-style: normal;
+}
+.dashboard-container .ressources-table-container .table .table-header .column-header#name-header {
+  width: 30%;
+}
+.dashboard-container .ressources-table-container .table .table-header .column-header#city-header {
+  width: 10%;
+}
+.dashboard-container .ressources-table-container .table .table-header .column-header#phone-header {
+  width: 20%;
+}
+.dashboard-container .ressources-table-container .table .table-header .column-header#email-header {
+  width: 25%;
+}
+.dashboard-container .ressources-table-container .table .table-header .column-header#headcount-header {
+  width: 15%;
+}
+.dashboard-container .ressources-table-container .table .table-header .column-header#emp-name-header {
+  width: 15%;
+}
+.dashboard-container .ressources-table-container .table .table-header .column-header#emp-surname-header {
+  width: 15%;
+}
+.dashboard-container .ressources-table-container .table .table-header .column-header#emp-phone-header {
+  width: 15%;
+}
+.dashboard-container .ressources-table-container .table .table-header .column-header#emp-email-header {
+  width: 25%;
+}
+.dashboard-container .ressources-table-container .table .table-header .column-header#emp-lab-header {
+  width: 30%;
+}
+.dashboard-container .ressources-table-container .table .table-content {
+  max-height: 60rem;
+  overflow-y: scroll;
+}
+.dashboard-container .ressources-table-container .table .table-content .table-row {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0;
+  position: relative;
+}
+.dashboard-container .ressources-table-container .table .table-content .table-row p {
+  width: 100%;
+  height: 100%;
+  color: rgb(58, 56, 56);
+  font-family: "Poppins";
+  font-weight: 400;
+  font-size: 1.5rem;
+  font-style: normal;
+  padding: 0.8rem 0 0.8rem 0;
+  border-bottom: 0.1rem solid rgba(33, 33, 33, 0.2);
+}
+.dashboard-container .ressources-table-container .table .table-content .table-row p#name-cell {
+  width: 30%;
+}
+.dashboard-container .ressources-table-container .table .table-content .table-row p#city-cell {
+  width: 10%;
+}
+.dashboard-container .ressources-table-container .table .table-content .table-row p#phone-cell {
+  width: 20%;
+}
+.dashboard-container .ressources-table-container .table .table-content .table-row p#email-cell {
+  width: 25%;
+}
+.dashboard-container .ressources-table-container .table .table-content .table-row p#headcount-cell {
+  width: 15%;
+}
+.dashboard-container .ressources-table-container .table .table-content .table-row p#emp-name-cell {
+  width: 15%;
+}
+.dashboard-container .ressources-table-container .table .table-content .table-row p#emp-surname-cell {
+  width: 15%;
+}
+.dashboard-container .ressources-table-container .table .table-content .table-row p#emp-phone-cell {
+  width: 15%;
+}
+.dashboard-container .ressources-table-container .table .table-content .table-row p#emp-email-cell {
+  width: 25%;
+}
+.dashboard-container .ressources-table-container .table .table-content .table-row p#emp-lab-cell {
+  width: 30%;
+}
+.dashboard-container .ressources-table-container .table .table-content .table-row p.nan-value {
+  color: red;
+}
+.dashboard-container .ressources-table-container .table .table-content .table-row .detail-icon {
+  position: absolute;
+  top: 50%;
+  right: 1rem;
+  transform: translateY(-50%);
+  width: 3rem;
+  height: 3rem;
+  cursor: pointer;
 }
 
 .login-page {
@@ -950,6 +1039,7 @@ h2 {
   align-items: center;
   gap: 3rem;
   transition: all 0.2s linear;
+  padding: 2rem 0 2rem 0;
 }
 .ressources-page .dashboard-navigation .navbar-link {
   color: rgb(58, 56, 56);
@@ -1124,10 +1214,31 @@ h2 {
   color: rgb(58, 56, 56);
   font-family: "Poppins";
   font-weight: 400;
-  font-size: 2rem;
+  font-size: 2.5rem;
   font-style: normal;
+  padding: 2rem 0 0 0;
   text-align: start;
-  margin: 2rem 0 2rem 0;
+}
+.laboratory-page .dashboard-navigation {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 3rem;
+  transition: all 0.2s linear;
+  padding: 2rem 0 2rem 0;
+}
+.laboratory-page .dashboard-navigation .navbar-link {
+  color: rgb(58, 56, 56);
+  font-family: "Poppins";
+  font-weight: 400;
+  font-size: 1.8rem;
+  font-style: normal;
+}
+.laboratory-page .dashboard-navigation .navbar-link:hover {
+  font-weight: 600;
 }
 .laboratory-page .laboratory-details-container {
   width: 100%;
@@ -1213,10 +1324,10 @@ h2 {
   color: rgb(58, 56, 56);
   font-family: "Poppins";
   font-weight: 400;
-  font-size: 2rem;
+  font-size: 2.5rem;
   font-style: normal;
+  padding: 2rem 0 0 0;
   text-align: start;
-  margin: 2rem 0 2rem 0;
 }
 .employee-page .employee-details-container {
   width: 100%;
@@ -1283,6 +1394,365 @@ h2 {
 }
 .employee-page .employee-details-container .details .subcontainer .detail .detail-value.nan-value {
   color: red;
+}
+
+.projects-page {
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 0;
+  background-color: rgb(240, 240, 240);
+  padding: 9rem 2rem 5rem 2rem;
+}
+.projects-page .projects-page-title {
+  width: 100%;
+  height: auto;
+  color: rgb(58, 56, 56);
+  font-family: "Poppins";
+  font-weight: 400;
+  font-size: 2.5rem;
+  font-style: normal;
+  padding: 2rem 0 0 0;
+  text-align: start;
+}
+.projects-page .dashboard-navigation {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 3rem;
+  transition: all 0.2s linear;
+  padding: 2rem 0 2rem 0;
+}
+.projects-page .dashboard-navigation .navbar-link {
+  color: rgb(58, 56, 56);
+  font-family: "Poppins";
+  font-weight: 400;
+  font-size: 1.8rem;
+  font-style: normal;
+}
+.projects-page .dashboard-navigation .navbar-link:hover {
+  font-weight: 600;
+}
+.projects-page .projects-table-container {
+  width: 100%;
+  height: auto;
+  background-color: white;
+  border-radius: 0.6rem;
+  box-shadow: 2px 10px 14px 2px rgba(0, 0, 0, 0.15);
+  margin-bottom: 4rem;
+}
+.projects-page .projects-table-container .projects-table-title {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 0;
+  color: hsl(0, 0%, 100%);
+  font-family: "Poppins";
+  font-weight: 400;
+  font-size: 1.6rem;
+  font-style: normal;
+  width: 100%;
+  height: 3.6rem;
+  padding-left: 1rem;
+  background-color: #32329b;
+  border-radius: 0.6rem 0.6rem 0 0;
+}
+.projects-page .projects-table-container .table {
+  width: 100%;
+  height: 100%;
+  padding: 2rem;
+}
+.projects-page .projects-table-container .table .table-header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0;
+  padding-bottom: 1rem;
+  margin-bottom: 1rem;
+}
+.projects-page .projects-table-container .table .table-header .column-header {
+  width: 100%;
+  height: 100%;
+  color: rgb(58, 56, 56);
+  font-family: "Poppins";
+  font-weight: 600;
+  font-size: 1.6rem;
+  font-style: normal;
+}
+.projects-page .projects-table-container .table .table-header .column-header#subject-header {
+  width: 20%;
+}
+.projects-page .projects-table-container .table .table-header .column-header#description-header {
+  width: 35%;
+}
+.projects-page .projects-table-container .table .table-header .column-header#status-header {
+  width: 15%;
+}
+.projects-page .projects-table-container .table .table-header .column-header#publication-header {
+  width: 15%;
+}
+.projects-page .projects-table-container .table .table-header .column-header#date-header {
+  width: 15%;
+}
+.projects-page .projects-table-container .table .table-content {
+  max-height: 60rem;
+  overflow-y: scroll;
+}
+.projects-page .projects-table-container .table .table-content .table-row {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0;
+  border-bottom: 0.1rem solid rgba(33, 33, 33, 0.2);
+  margin-bottom: 2rem;
+  position: relative;
+}
+.projects-page .projects-table-container .table .table-content .table-row p {
+  width: 100%;
+  height: 100%;
+  color: rgb(58, 56, 56);
+  font-family: "Poppins";
+  font-weight: 400;
+  font-size: 1.4rem;
+  font-style: normal;
+  padding: 0.8rem 0 0.8rem 0;
+  min-height: 15rem;
+}
+.projects-page .projects-table-container .table .table-content .table-row p#subject-cell {
+  width: 20%;
+}
+.projects-page .projects-table-container .table .table-content .table-row p#description-cell {
+  width: 35%;
+}
+.projects-page .projects-table-container .table .table-content .table-row p#status-cell {
+  width: 15%;
+}
+.projects-page .projects-table-container .table .table-content .table-row p#publication-cell {
+  width: 15%;
+}
+.projects-page .projects-table-container .table .table-content .table-row p#date-cell {
+  width: 15%;
+}
+.projects-page .projects-table-container .table .table-content .table-row p#date-cell.nan-value {
+  color: red;
+}
+.projects-page .projects-table-container .table .table-content .table-row .detail-icon {
+  position: absolute;
+  top: 50%;
+  right: 1rem;
+  transform: translateY(-50%);
+  width: 3rem;
+  height: 3rem;
+  cursor: pointer;
+}
+
+.project-page {
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 0;
+  background-color: rgb(240, 240, 240);
+  padding: 9rem 2rem 5rem 2rem;
+}
+.project-page .project-page-title {
+  width: 100%;
+  height: auto;
+  color: rgb(58, 56, 56);
+  font-family: "Poppins";
+  font-weight: 400;
+  font-size: 2.5rem;
+  font-style: normal;
+  padding: 2rem 0 0 0;
+  text-align: start;
+}
+.project-page .dashboard-navigation {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 3rem;
+  transition: all 0.2s linear;
+  padding: 2rem 0 2rem 0;
+}
+.project-page .dashboard-navigation .navbar-link {
+  color: rgb(58, 56, 56);
+  font-family: "Poppins";
+  font-weight: 400;
+  font-size: 1.8rem;
+  font-style: normal;
+}
+.project-page .dashboard-navigation .navbar-link:hover {
+  font-weight: 600;
+}
+.project-page .project-details-container {
+  width: 100%;
+  height: auto;
+  background-color: white;
+  box-shadow: 2px 10px 14px 2px rgba(0, 0, 0, 0.15);
+  border-radius: 0.6rem;
+}
+.project-page .project-details-container .project-name {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 0;
+  color: hsl(0, 0%, 100%);
+  font-family: "Poppins";
+  font-weight: 400;
+  font-size: 1.6rem;
+  font-style: normal;
+  width: 100%;
+  height: 3.6rem;
+  padding-left: 1rem;
+  background-color: #32329b;
+  border-radius: 0.6rem 0.6rem 0 0;
+}
+.project-page .project-details-container .details {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  gap: 4rem;
+  padding: 4rem 2rem;
+}
+.project-page .project-details-container .details .subcontainer {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 2rem;
+}
+.project-page .project-details-container .details .subcontainer .detail {
+  width: 100%;
+  height: 100%;
+  border-bottom: 0.1rem solid rgba(58, 56, 56, 0.4);
+}
+.project-page .project-details-container .details .subcontainer .detail .detail-label {
+  color: rgb(58, 56, 56);
+  font-family: "Poppins";
+  font-weight: 600;
+  font-size: 1.6rem;
+  font-style: normal;
+}
+.project-page .project-details-container .details .subcontainer .detail .detail-value {
+  color: rgb(58, 56, 56);
+  font-family: "Poppins";
+  font-weight: 400;
+  font-size: 1.4rem;
+  font-style: normal;
+  margin: 0.6rem 0 0.6rem 0;
+}
+.project-page .project-details-container .details .subcontainer .detail .detail-value.nan-value {
+  color: red;
+}
+
+.inventory-page {
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 0;
+  background-color: rgb(240, 240, 240);
+  padding: 9rem 2rem 5rem 2rem;
+}
+.inventory-page .inventory-page-title {
+  width: 100%;
+  height: auto;
+  color: rgb(58, 56, 56);
+  font-family: "Poppins";
+  font-weight: 400;
+  font-size: 2.5rem;
+  font-style: normal;
+  padding: 2rem 0 0 0;
+  text-align: start;
+}
+.inventory-page .dashboard-navigation {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 3rem;
+  transition: all 0.2s linear;
+  padding: 2rem 0 2rem 0;
+}
+.inventory-page .dashboard-navigation .navbar-link {
+  color: rgb(58, 56, 56);
+  font-family: "Poppins";
+  font-weight: 400;
+  font-size: 1.8rem;
+  font-style: normal;
+}
+.inventory-page .dashboard-navigation .navbar-link:hover {
+  font-weight: 600;
+}
+
+.reservation-page {
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 0;
+  background-color: rgb(240, 240, 240);
+  padding: 9rem 2rem 5rem 2rem;
+}
+.reservation-page .reservation-page-title {
+  width: 100%;
+  height: auto;
+  color: rgb(58, 56, 56);
+  font-family: "Poppins";
+  font-weight: 400;
+  font-size: 2.5rem;
+  font-style: normal;
+  padding: 2rem 0 0 0;
+  text-align: start;
+}
+.reservation-page .dashboard-navigation {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 3rem;
+  transition: all 0.2s linear;
+  padding: 2rem 0 2rem 0;
+}
+.reservation-page .dashboard-navigation .navbar-link {
+  color: rgb(58, 56, 56);
+  font-family: "Poppins";
+  font-weight: 400;
+  font-size: 1.8rem;
+  font-style: normal;
+}
+.reservation-page .dashboard-navigation .navbar-link:hover {
+  font-weight: 600;
 }
 
 .navbar-container-mobile {

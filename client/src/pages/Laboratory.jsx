@@ -36,6 +36,15 @@ const Laboratory = () => {
     <div className='laboratory-page'>
       <h1 className='laboratory-page-title'>Laboratory details</h1>
 
+      <section className='dashboard-navigation'>
+        <Link to='/dashboard' className='navbar-link'>Database request</Link>
+        <Link to='/ressources' className='navbar-link'>Global Ressources</Link>
+        <Link to='/projects' className='navbar-link'>Projects</Link>
+        <Link to='/inventory' className='navbar-link'>Inventory</Link>
+        <Link to='/reservation' className='navbar-link'>Reservation</Link>
+      </section>
+
+
       <div className='laboratory-details-container'>
         <h2 className='laboratory-name'>{labo.name ? labo.name : "Empty"}</h2>
 

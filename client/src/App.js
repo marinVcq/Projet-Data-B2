@@ -16,6 +16,8 @@ import Contact from "./pages/Contact";
 import About from "./pages/About";
 import Ressources from "./pages/Ressources";
 import Projects from "./pages/Projects";
+import Inventory from "./pages/Inventory"
+import Reservation from "./pages/Reservation";
 
 // Single page
 import Employee from "./pages/Employee"
@@ -54,6 +56,8 @@ const App = () => {
         { path: "/register", element: <Register /> },
         { path: "/dashboard", element: <Dashboard /> },
         { path: "/about", element: <About /> },
+        { path: "/inventory", element: <Inventory /> },
+        { path: "/reservation", element: <Reservation /> },
         { path: "/contact", element: <Contact /> },
         { path: "/employee/:id", element: <Employee /> },
         { path: "/laboratory/:id", element: <Laboratory /> },

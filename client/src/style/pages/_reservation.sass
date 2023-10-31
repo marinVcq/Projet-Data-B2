@@ -1,0 +1,23 @@
+.reservation-page
+    @include width-height(100%, auto)
+    @include flexbox(column, flex-start, center)
+    background-color: rgb(240,240,240)
+    padding: 9rem 2rem 5rem 2rem
+
+    // TITLE OF THE PAGE
+    .reservation-page-title
+        @include width-height(100%,auto)
+        @include set-font($lightBlack, "Poppins", 2.5rem ,400, normal)
+        padding: 2rem 0 0 0
+        text-align: start
+
+    // DASHBOARD NAV
+    .dashboard-navigation
+        @include width-height(100%,100%)
+        @include flexbox(row, flex-start, center, 3rem)
+        transition: all 0.2s linear
+        padding: 2rem 0 2rem 0
+        .navbar-link
+            @include set-font($lightBlack, "Poppins", 1.8rem, 400, normal)
+            &:hover
+                font-weight: 600
