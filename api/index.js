@@ -7,6 +7,7 @@ import authRoutes from "./routes/auth.js";
 import employeeRoutes from "./routes/employees.js";
 import projectRoutes from "./routes/projects.js";
 import experimentRoutes from "./routes/experiments.js";
+import universityRoutes from "./routes/universities.js";
 
 
 import dotenv from 'dotenv';
@@ -21,6 +22,7 @@ app.use("/api/auth", authRoutes);
 app.use("/api/employees", employeeRoutes);
 app.use("/api/projects", projectRoutes);
 app.use("/api/experiments", experimentRoutes);
+app.use("/api/universities", universityRoutes);
 
 const server = app.listen(process.env.DB_PORT, () => {
     console.log("Server connected");

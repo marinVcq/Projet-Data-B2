@@ -17,6 +17,7 @@ const Dashboard = () => {
     const [experiments, setExperiments] = useState([]);
     const [employees, setEmployees] = useState([]);
     const [projects, setProjects] = useState([]);
+    const [universities, setUniversities] = useState([]);
 
 
     const employeeHeader = ["Name", "Surname", "Phone Number", "Email", "Laboratory"];
@@ -27,21 +28,37 @@ const Dashboard = () => {
     useEffect(() => {
         const fetchData = async () => {
             try {
+                // Fetch data for Labos
                 const resLabos = await axios.get('/api/labos');
                 setLabos(resLabos.data);
 
+                // Fetch data for Experiments
                 const resExperiments = await axios.get('/api/experiments');
                 setExperiments(resExperiments.data);
 
-                const resEmployees = await axios.get('/api/employees');
-                setEmployees(resEmployees.data);
+                // Fetch data for Universities
+                const resUniversities = await axios.get('/api/university');
+                setUniversities(resUniversities.data);
 
+                // Fetch data for Employees
+                const resEmployees = await axios.get('/api/employees');
+                const employeesWithUniversity = resEmployees.data.map(employee => {
+                    const associatedUniversity = resUniversities.data.find(university => university.iduniversity === employee.has_university);
+                    return {
+                        ...employee,
+                        university: associatedUniversity || null
+                    };
+                });
+                setEmployees(employeesWithUniversity);
+
+                // Fetch data for Projects
                 const resProjects = await axios.get('/api/projects');
                 setProjects(resProjects.data);
             } catch (err) {
                 console.log(err);
             }
         };
+
         fetchData();
     }, []);
 
@@ -57,7 +74,7 @@ const Dashboard = () => {
                 filterOptions = ['name', 'address', 'city'];
                 break;
             case 'employee':
-                filterOptions = ['name', 'surname', 'status'];
+                filterOptions = ['name', 'surname', 'status', 'birthdate', 'laboratory', 'university', 'contract', 'thesis', 'team', 'email', 'phoneNumber'];
                 break;
             case 'project':
                 filterOptions = ['name', 'description', 'status'];

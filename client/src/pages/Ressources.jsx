@@ -116,7 +116,7 @@ const Ressources = () => {
       </div>
 
       <div className='ressources-table-container'>
-        <h2 className='ressources-table-title'>Reasearch Student</h2>
+        <h2 className='ressources-table-title'>Research Student</h2>
         <div className='table'>
           <div className='table-header'>
                 <p className='column-header' id="emp-name-header">Name</p>
